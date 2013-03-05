@@ -2534,3 +2534,419 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-05 11:06:15 +0300
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2013-03-05 11:47:16 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (8.0ms)
+  [1m[35mUser Load (4.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 177ms (Views: 147.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bookings.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /bookings.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/cinemas.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /cinemas.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /movies.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /payments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/seats.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /seats.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /shows.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/theaters.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /theaters.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /user_sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /bookings.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cinemas.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /cinemas.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /movies.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /payments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/seats.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /seats.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /shows.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/theaters.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /theaters.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /user_sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:17 +0300
+Served asset /application.js - 304 Not Modified (63ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-03-05 11:47:18 +0300
+Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookings.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /bookings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /cinemas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /payments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /seats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /theaters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /bookings.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /cinemas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /payments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /seats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /theaters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:19 +0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (15.7ms)
+  Rendered users/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookings.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /bookings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /cinemas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /payments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /seats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /theaters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /bookings.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /cinemas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /payments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /seats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /theaters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:21 +0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-03-05 11:47:39 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D4Zjx+OFbSxQcEOTnzgWJLcwkeqoEt6MfEdVWPx6inA=", "user"=>{"name"=>"sarah", "email"=>"sarahmustafa93@gmail.com", "username"=>"mustafa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "billing_address"=>"", "creditcard_num"=>"", "creditcard_type"=>"", "security_num"=>""}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (36.3ms)[0m  INSERT INTO "users" ("billing_address", "created_at", "creditcard_num", "creditcard_type", "crypted_password", "email", "is_admin", "is_customer", "is_manager", "name", "reward_points", "salt", "security_num", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["billing_address", ""], ["created_at", Tue, 05 Mar 2013 08:47:40 UTC +00:00], ["creditcard_num", nil], ["creditcard_type", ""], ["crypted_password", "$2a$10$LCqcy.Zml2h3AQfo45.3neIS6cNkhZb9jMJcXUEkasx8OstpTzbjq"], ["email", "sarahmustafa93@gmail.com"], ["is_admin", nil], ["is_customer", nil], ["is_manager", nil], ["name", "sarah"], ["reward_points", nil], ["salt", "mUzSysBgzQfybNXsfRZU"], ["security_num", nil], ["updated_at", Tue, 05 Mar 2013 08:47:40 UTC +00:00], ["username", "mustafa"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 636ms (ActiveRecord: 38.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bookings.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /bookings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /cinemas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /payments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /seats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /theaters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /bookings.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cinemas.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /cinemas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /payments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/seats.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /seats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theaters.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /theaters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-05 11:47:40 +0300
+Served asset /application.js - 304 Not Modified (0ms)
