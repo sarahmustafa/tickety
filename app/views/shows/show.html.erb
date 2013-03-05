@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Show time:</b>
+  <%= @show.show_time %>
+</p>
+
+<p>
+  <b>Show date:</b>
+  <%= @show.show_date %>
+</p>
+
+<p>
+  <b>Show type:</b>
+  <%= @show.show_type %>
+</p>
+
+<p>
+  <b>Theater:</b>
+  <%= @show.theater_id %>
+</p>
+
+<p>
+  <b>Cinema:</b>
+  <%= @show.cinema_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>

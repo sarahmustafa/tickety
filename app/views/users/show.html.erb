@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Reward points:</b>
+  <%= @user.reward_points %>
+</p>
+
+<p>
+  <b>Billing address:</b>
+  <%= @user.billing_address %>
+</p>
+
+<p>
+  <b>Creditcard num:</b>
+  <%= @user.creditcard_num %>
+</p>
+
+<p>
+  <b>Creditcard type:</b>
+  <%= @user.creditcard_type %>
+</p>
+
+<p>
+  <b>Security num:</b>
+  <%= @user.security_num %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
