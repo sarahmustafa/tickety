@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Booking do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should have a proprer associations" do
+    have_many(:seats)
+    belong_to(:user)
+    belong_to(:show)
+    belong_to(:payment)
+  end
 end

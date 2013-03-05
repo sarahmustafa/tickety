@@ -24,7 +24,12 @@ describe MoviesController do
   # Movie. As you add validations to Movie, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "title" => "MyString" }
+    { :title => "transformers 7",
+      :duration => 110,
+      :summary => "The movie is intened to be on show after 2014 accourding to our group predictions",
+      :genre => "science fiction",
+      :actors => "Jaasim Pplin, Shamma Al hitmi, Madhurima Datta, Sarah Mustafa"
+       }
   end
 
   # This should return the minimal set of values that should be in the session

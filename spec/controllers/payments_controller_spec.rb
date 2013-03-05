@@ -24,7 +24,9 @@ describe PaymentsController do
   # Payment. As you add validations to Payment, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "amount" => "1" }
+    { :amount => 75,
+      :date => "2013-03-03",
+      :customer_id => "1"}
   end
 
   # This should return the minimal set of values that should be in the session
