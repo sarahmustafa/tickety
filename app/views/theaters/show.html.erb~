@@ -2,7 +2,7 @@
 
 <p>
   <b>Cinema:</b>
-  <%= @theater.cinema.name %>
+  <%= @theater.cinema_id %>
 </p>
 
 <p>
