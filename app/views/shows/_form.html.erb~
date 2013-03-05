@@ -30,7 +30,7 @@
        </div>
 
   <div class="field">
-    <%= f.label :theater_id, "Theater" %><br />
+    <%= f.label :theater_id %><br />
     <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
   </div>
 
