@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Seat do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should have a proprer associations" do
+     belong_to(:theater)
+     belong_to(:booking)
+   end
 end

@@ -84,7 +84,7 @@ describe SeatsController do
       end
 
       it "redirects to the created seat" do
-        post :create, {:seat => valid_attributes}, valid_session
+         post :create, {:seat => valid_attributes}, valid_session
         response.should redirect_to(Seat.last)
       end
     end

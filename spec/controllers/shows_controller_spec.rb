@@ -24,7 +24,11 @@ describe ShowsController do
   # Show. As you add validations to Show, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "show_time" => "2013-03-03 11:16:02" }
+    { :show_time => "2013-03-03 11:16:02",
+      :show_date => "2013-03-03",
+      :show_type => "3D",
+      :theater_id => "1",
+      :cinema_id => "1" }
   end
 
   # This should return the minimal set of values that should be in the session

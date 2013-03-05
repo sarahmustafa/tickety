@@ -7,4 +7,5 @@ describe Booking do
     belong_to(:show)
     belong_to(:payment)
   end
+  
 end

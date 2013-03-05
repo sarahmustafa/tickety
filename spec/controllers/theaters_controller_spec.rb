@@ -24,7 +24,8 @@ describe TheatersController do
   # Theater. As you add validations to Theater, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "cinema_id" => "1" }
+    { :cinema_id => "1",
+      :theater_number => "3" }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -33,7 +34,7 @@ describe TheatersController do
   def valid_session
     {}
   end
-
+    
   describe "GET index" do
     it "assigns all theaters as @theaters" do
       theater = Theater.create! valid_attributes

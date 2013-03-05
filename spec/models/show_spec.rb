@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Show do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should have a proprer associations" do
+     have_many(:bookings)
+     belong_to(:movie)
+     belong_to(:theater)
+     belong_to(:cinema)
+   end
 end
