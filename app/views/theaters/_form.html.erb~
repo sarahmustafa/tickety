@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :cinema_id %><br />
-    <%= select :theater, :cinema_id, Cinema.all.map {|c| [c.name, c.id]}, :include_blank => 'None' %>
+    <%= f.number_field :cinema_id %>
   </div>
   <div class="field">
     <%= f.label :theater_number %><br />
