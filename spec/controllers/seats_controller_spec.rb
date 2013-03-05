@@ -24,7 +24,11 @@ describe SeatsController do
   # Seat. As you add validations to Seat, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "number" => "1" }
+    { :number => 1,
+      :type => "VIP",
+      :theater_id => "1",
+      :is_taken => "true",
+      :booking_id => "1"}
   end
 
   # This should return the minimal set of values that should be in the session
