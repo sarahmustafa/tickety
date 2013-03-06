@@ -30,9 +30,14 @@
        </div>
 
   <div class="field">
-    <%= f.label :theater_id %><br />
+    <%= f.label :theater_id, "Theater" %><br />
     <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
   </div>
+
+ <%= f.autocomplete_field :movie_id, autocomplete_movie_title_movies_path %>
+
+
+</div>
 
   <div class="actions">
     <%= f.submit %>

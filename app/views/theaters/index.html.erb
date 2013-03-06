@@ -11,7 +11,7 @@
 
 <% @theaters.each do |theater| %>
   <tr>
-    <td><%= theater.cinema_id %></td>
+    <td><%= theater.cinema.name %></td>
     <td><%= theater.theater_number %></td>
     <td><%= link_to 'Show', theater %></td>
     <td><%= link_to 'Edit', edit_theater_path(theater) %></td>
