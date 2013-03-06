@@ -15,3 +15,6 @@ jQuery ->
     else
       $('#show_theater_id').empty()
       $('#show_theater_id').parent().hide()
+
+  $('#show_movie_title').autocomplete
+   source: $('#show_movie_title').data('autocomplete-source')
