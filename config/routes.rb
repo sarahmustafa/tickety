@@ -1,5 +1,10 @@
 Tickety::Application.routes.draw do
 
+
+resources :shows do
+get :autocomplete_movie_title, :on => :collection
+end
+
   resources :movies
 
   resources :payments
@@ -28,6 +33,20 @@ match 'logout' => 'user_sessions#destroy', :as => :logout
  # get "user_sessions/destroy"
 
   resources :users
+
+
+
+
+
+
+
+#resources :shows do
+  #get :autocomplete_movie_id, :on => :collection
+#end
+
+#resources :movies  do
+#get :auto_complete_for_movie_title , :on => :collection 
+#end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -86,3 +105,4 @@ match 'logout' => 'user_sessions#destroy', :as => :logout
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+

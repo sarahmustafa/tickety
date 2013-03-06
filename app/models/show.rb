@@ -4,4 +4,8 @@ has_many :bookings
 belongs_to :movie
 belongs_to :theater
 belongs_to :cinema
+
+attr_reader :movie_title
+#attr_accessor :movie_title
+
 end
