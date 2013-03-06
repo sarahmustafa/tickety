@@ -1,8 +1,10 @@
 Tickety::Application.routes.draw do
 
 
-resources :shows do
-get :autocomplete_movie_title, :on => :collection
+
+
+resources :movies do
+get :auto_complete_for_movie_title , :on => :collection
 end
 
   resources :movies
