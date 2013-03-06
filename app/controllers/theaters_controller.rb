@@ -44,6 +44,12 @@ class TheatersController < ApplicationController
 
     respond_to do |format|
       if @theater.save
+	for i in 1..@theater.seat_num.to_i
+   	@seats= Seat.new(:theater_id => @theater.id, :number => i)
+	@seats.save
+	end
+
+	
         format.html { redirect_to @theater, notice: 'Theater was successfully created.' }
         format.json { render json: @theater, status: :created, location: @theater }
       else

@@ -131,6 +131,8 @@ GEM
       activesupport (= 3.2.8)
       bundler (~> 1.0)
       railties (= 3.2.8)
+    rails3-jquery-autocomplete (1.0.11)
+      rails (~> 3.0)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -213,6 +215,7 @@ DEPENDENCIES
   launchy
   mysql2
   rails (= 3.2.8)
+  rails3-jquery-autocomplete
   rspec-rails (>= 2.8.1)
   sass-rails (~> 3.2.3)
   shoulda-matchers

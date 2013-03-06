@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
+autocomplete :movie, :title
+
   def index
     @movies = Movie.all
 
