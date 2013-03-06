@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
-autocomplete :movie, :title
+autocomplete :movie, :title , :display_value => :funky_method
 
   def index
     @movies = Movie.all
