@@ -34,6 +34,11 @@
     <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
   </div>
 
+ <%= f.autocomplete_field :movie_id, autocomplete_movie_title_shows_path %>
+
+
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

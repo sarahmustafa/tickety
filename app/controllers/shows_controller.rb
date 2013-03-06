@@ -1,4 +1,6 @@
 class ShowsController < ApplicationController
+ autocomplete :movie, :title
+
   # GET /shows
   # GET /shows.json
   def index
