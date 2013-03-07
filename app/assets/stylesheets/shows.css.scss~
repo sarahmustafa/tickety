@@ -15,12 +15,12 @@ border-top: solid 1px #DDD;
 margin: 0;
 padding: 0;
 a{
-color: rgb(213, 120, 19);
+color: #000;
 display: block;
 padding: 3px;
 }
 a.ui-state-hover, a.ui-state-active{
-	background-color: #FFFCB2;
+background-color: #FFFCB2;
 }
 }
 }

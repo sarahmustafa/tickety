@@ -1,5 +1,5 @@
 class ShowsController < ApplicationController
- autocomplete :movie, :movie_id
+ #autocomplete :movie, :title
 
   # GET /shows
   # GET /shows.json
@@ -27,10 +27,12 @@ class ShowsController < ApplicationController
   # GET /shows/new.json
   def new
     @show = Show.new
-
+    @movies = Movie.find(:all, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @show }
+      #format.json { render json: @show }
+      #format.js # index.js.erb 
+      format.js { @movies = Movie.find(:all, :movies => ['title like ?', "%#{params[:search]}%"]) }
     end
   end
 
@@ -82,4 +84,7 @@ class ShowsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
 end
