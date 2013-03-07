@@ -7,4 +7,10 @@ describe Show do
      belong_to(:theater)
      belong_to(:cinema)
    end
+   
+   describe "testing validations" do
+       it {should validate_presence_of(:show_date)}
+       it {should validate_presence_of(:show_time)}
+       it {should validate_presence_of(:theater_id)}
+     end
 end

@@ -24,4 +24,19 @@ FactoryGirl.define do
     name "Grand cinecenter"
     location "City Center Doha"
   end
+  
+  factory :theater do
+     theater_number 1
+     seat_num 3
+     association :cinema
+  end
+  
+  factory :show do
+     show_time Time.now + 4.hours
+     show_date 2013-03-03
+     show_type "3D"
+     association :cinema
+     association :movie
+     association :theater
+  end
 end
