@@ -4,11 +4,11 @@
 
 jQuery ->
   $('#booking_show_id').parent().hide()
-  bookings = $('#booking_show_id').html()
+  shows = $('#booking_show_id').html()
   $('#booking_cinema_id').change ->
     cinema = $('#show_cinema_id :selected').text()
     escaped_cinema = cinema.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-    options = $(bookings).filter("optgroup[label='#{escaped_cinema}']").html()
+    options = $(shows).filter("optgroup[label='#{escaped_cinema}']").html()
     if options
       $('#booking_show_id').html(options)
       $('#booking_show_id').parent().show()

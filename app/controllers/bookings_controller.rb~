@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
     @movie_details = Movie.find_by_id(1);
     @cinema = params[:cin_id]
     #@shows = Show.all(:order => 'updated_at DESC ', :conditions => ["movie_id = #{@cinema}"])
-    @shows = Movie.find_by_id(1).shows.order("cinema_id DESC , show_date ASC, show_time ASC")
+    @shows = Movie.find_by_id(1).shows.order("cinema_id DESC , show_date DESC, show_time DESC")
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @booking }
