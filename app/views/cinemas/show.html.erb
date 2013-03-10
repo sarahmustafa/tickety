@@ -1,3 +1,5 @@
+<div class="row">
+<div class="small-2 large-4 columns">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,7 +11,9 @@
   <b>Location:</b>
   <%= @cinema.location %>
 </p>
-
-
+</div>
+</div>
+<center>
 <%= link_to 'Edit', edit_cinema_path(@cinema) %> |
 <%= link_to 'Back', cinemas_path %>
+</center>

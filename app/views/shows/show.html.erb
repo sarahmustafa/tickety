@@ -1,3 +1,5 @@
+<div class="row">
+<div class="small-2 large-4 columns">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,7 +26,9 @@
   <b>Cinema:</b>
   <%= @show.cinema_id %>
 </p>
-
-
+</div>
+</div>
+<center>
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>
+</center>

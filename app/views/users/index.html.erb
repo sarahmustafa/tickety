@@ -1,3 +1,4 @@
+<center>
 <h1>Listing users</h1>
 
 <table>
@@ -5,11 +6,6 @@
     <th>Username</th>
     <th>Email</th>
     <th>Name</th>
-    <th>Reward points</th>
-    <th>Billing address</th>
-    <th>Creditcard num</th>
-    <th>Creditcard type</th>
-    <th>Security num</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,11 +16,6 @@
     <td><%= user.username %></td>
     <td><%= user.email %></td>
     <td><%= user.name %></td>
-    <td><%= user.reward_points %></td>
-    <td><%= user.billing_address %></td>
-    <td><%= user.creditcard_num %></td>
-    <td><%= user.creditcard_type %></td>
-    <td><%= user.security_num %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -34,4 +25,6 @@
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, :class => 'button' %>
+
+</center>

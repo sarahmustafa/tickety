@@ -11,19 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :cinema_id %><br />
-    <%= select :theater, :cinema_id, Cinema.all.map {|c| [c.name, c.id]}, :include_blank => 'None' %>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Cinema ID</label>
+	    <%= select :theater, :cinema_id, Cinema.all.map {|c| [c.name, c.id]}, :include_blank => 'None' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :theater_number %><br />
-    <%= f.number_field :theater_number %>
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Theater Number</label>
+	    <%= f.number_field :theater_number %>
+    </div>
   </div>
- <div class="field">
-    <%= f.label :seat_num %><br />
-    <%= f.number_field :seat_num %>
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Seat Number</label>
+	   <%= f.number_field :seat_num %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+<br/>
+<br/>
+<center>
+<input type="Submit" value="Submit" class="button"> 
+</center>
 <% end %>

@@ -11,31 +11,54 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :booking_date %><br />
-    <%= f.date_select :booking_date %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_id %><br />
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Booking Date</label>
+	   <%= f.date_select :booking_date, :class => 'medium' %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Customer ID</label>
     <%= f.number_field :customer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :show_time %><br />
-    <%= f.time_select :show_time %>
-  </div>
-  <div class="field">
-    <%= f.label :movie_id %><br />
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Show Time</label>
+     <%= f.time_select :show_time %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Movie ID</label>
     <%= f.number_field :movie_id %>
-  </div>
-  <div class="field">
-    <%= f.label :cinema_id %><br />
+      </div>
+    </div>
+
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Cinema ID</label>
     <%= f.number_field :cinema_id %>
-  </div>
-  <div class="field">
-    <%= f.label :payment_id %><br />
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Payment ID</label>
     <%= f.number_field :payment_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      </div>
+    </div>
+
+
+	<br/>
+	<br/>
+	<center>
+	<input type="Submit" value="Submit" class="button"> 
+	</center>
+	<% end %>

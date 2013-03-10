@@ -1,3 +1,5 @@
+<div class="row">
+<div class="small-2 large-4 columns">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,7 +26,9 @@
   <b>Actors:</b>
   <%= @movie.actors %>
 </p>
-
-
+</div>
+</div>
+<center>
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
+</center>
