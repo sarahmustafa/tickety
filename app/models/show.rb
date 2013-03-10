@@ -5,11 +5,11 @@ belongs_to :movie
 belongs_to :theater
 belongs_to :cinema
 
-<<<<<<< HEAD
+
 attr_reader :movie_title
 #attr_accessor :movie_title
 validates :show_date, :show_time, :theater_id, :movie_title, :presence => true
-=======
+
 #attr_reader :movie_title
 #attr_accessible :movie_id
 #attr_accessor :movie_id
@@ -26,6 +26,6 @@ def movie_title=(title)
   self.movie = Movie.find_by_title(title) if title.present?
 end
 
->>>>>>> 14e490aebd28932fbf181bf9d064c724f6325de3
+
 
 end
