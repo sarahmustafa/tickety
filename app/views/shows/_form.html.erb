@@ -12,37 +12,56 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :show_time %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Show Time</label>
     <%= f.time_select :show_time %>
-  </div>
-  <div class="field">
-    <%= f.label :show_date %><br />
-    <%= f.date_select :show_date %>
-  </div>
-  <div class="field">
-    <%= f.label :show_type %><br />
-    <%= f.text_field :show_type %>
+    </div>
   </div>
 
-  <div class="field">
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Show Date</label>
+    <%= f.date_select :show_date %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Show Type</label>
+    <%= f.text_field :show_type %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Cinema ID</label>
     <%= f.label :cinema_id %><br />
     <%= f.collection_select :cinema_id, Cinema.order(:name), :id, :name, include_blank: true %>
-       </div>
-
-  <div class="field">
-    <%= f.label :theater_id, "Theater" %><br />
-    <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
+    </div>
   </div>
 
-	<div class="field">
-<%= f.label :movie_title %>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Theater ID</label>
+    <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Movie Title</label>
 <%= f.text_field :movie_title, data: {autocomplete_source: Movie.order(:title).map(&:title)} %>
-	</div>   
+    </div>
+  </div>
 
    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<br/>
+<br/>
+<center>
+<input type="Submit" value="Submit" class="button"> 
+</center>
 <% end %>

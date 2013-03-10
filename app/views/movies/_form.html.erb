@@ -11,27 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Title</label>
     <%= f.text_field :title %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :duration %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Duration</label>
     <%= f.number_field :duration %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :summary %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Summary</label>
     <%= f.text_field :summary %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :genre %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Genre</label>
     <%= f.text_field :genre %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :actors %><br />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Actors</label>
     <%= f.text_field :actors %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+<br/>
+<br/>
+<center>
+<input type="Submit" value="Submit" class="button"> 
+</center>
 <% end %>

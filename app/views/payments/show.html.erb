@@ -1,3 +1,5 @@
+<div class="row">
+<div class="small-2 large-4 columns">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -14,7 +16,9 @@
   <b>Customer:</b>
   <%= @payment.customer_id %>
 </p>
-
-
+</div>
+</div>
+<center>
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
 <%= link_to 'Back', payments_path %>
+</center>
