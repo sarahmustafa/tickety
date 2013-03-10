@@ -41,6 +41,16 @@
 <% end %>
 
 
+
+  <div class="field">
+    <%= f.label :show_time %><br />
+    <%= f.time_select :show_time %>
+  </div>
+
+
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
