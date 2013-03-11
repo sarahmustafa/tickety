@@ -41,13 +41,15 @@
 <% end %>
 
 
-
-  <div class="field">
-    <%= f.label :show_time %><br />
-    <%= f.time_select :show_time %>
-  </div>
+  
 
 
+<%= select_tag :cinema_id, options_from_collection_for_select(@cinemas, "id", "name"),:'data-remote' => 'true',:'data-url' => url_for(:controller => 'Booking', :action => 'getCinema'),:'data-type' => 'json'%>
+
+
+<%= select_tag :show_id, "<option>Please select!</option>" %> 
+  
+  
 
 
 

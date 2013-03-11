@@ -16,3 +16,21 @@
 //= require_tree .
 
 
+$(document).ready(function() {
+  $('#cinema_id').live('ajax:success', function(evt, data, status, xhr) {
+        var selectbox2 = $('#show_id');
+
+      selectbox2.empty();
+
+ 
+    $.each(data, function(index, value) {
+           var opt = $('<option/>');
+                 opt.attr('value', value[0]);
+         	 opt.text(value[1]);
+                 opt.appendTo(selectbox2);
+    });
+  });
+
+});
+
+
