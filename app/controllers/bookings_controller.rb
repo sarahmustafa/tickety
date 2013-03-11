@@ -24,6 +24,9 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   # GET /bookings/new.json
   def new
+    @cinemas = Cinema.all
+    @timings = []
+
     @booking = Booking.new
     @current_user = current_user
     #@movie = params[:mov_id]
@@ -36,6 +39,39 @@ class BookingsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @booking }
     end
+  end
+
+  def update_timings
+    @cinemaid= params[:cinema_id]
+    cinema = Cinema.find(params[:cinema_id])
+	
+    #@timings = Show.find_all_by_batch_id(batch.id,:conditions=>"is_deleted=false")
+    @timings = Movie.find_by_id(@cinemaid).shows
+    render :update do |page|
+      page.replace_html 'timings', :partial => 'timings', :object => @timings
+    end
+  end
+
+  def show_selected
+  @booking = Booking.create(:show_id => params[:id])
+  if @booking.save
+        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
+        format.json { render json: @booking, status: :created, location: @booking }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @booking.errors, status: :unprocessable_entity }
+      end
+  end
+
+ def getCinema
+    # this contains what has been selected in the first select box
+    @data_from_select1 = params[:cinema_id]
+
+    # we get the data for selectbox 2
+    @data_for_select2 = Movie.find_by_id(@data_from_select1).shows
+    # render an array in JSON containing arrays like:
+    # [[:id1, :name1], [:id2, :name2]]
+    render :json => @data_for_select2.map{|c| [c.id, c.name]}
   end
 
   # GET /bookings/1/edit

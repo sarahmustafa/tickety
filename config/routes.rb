@@ -7,6 +7,10 @@ resources :movies do
 get :auto_complete_for_movie_title , :on => :collection
 end
 
+ resources :bookings do
+get :getCinema , :on => :collection
+    end
+
   resources :movies
 
   resources :payments
@@ -35,7 +39,6 @@ match 'logout' => 'user_sessions#destroy', :as => :logout
  # get "user_sessions/destroy"
 
   resources :users
-
 
 
 

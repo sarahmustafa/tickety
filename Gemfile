@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem "heroku"
 gem "bcrypt-ruby"
 gem 'rails3-jquery-autocomplete'
+gem "cancan"
 
 
 # Bundle edge Rails instead:
