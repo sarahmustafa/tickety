@@ -6,7 +6,7 @@ class SorceryCore < ActiveRecord::Migration
       t.string :crypted_password, :default => nil
       t.string :salt,             :default => nil
       t.string :name
-      t.boolean :is_customer, :default => true 
+      t.boolean :is_customer
       t.boolean :is_admin
       t.boolean :is_manager
       t.integer :reward_points

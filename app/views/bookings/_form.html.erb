@@ -41,6 +41,18 @@
 <% end %>
 
 
+  
+
+
+<%= select_tag :cinema_id, options_from_collection_for_select(@cinemas, "id", "name"),:'data-remote' => 'true',:'data-url' => url_for(:controller => 'bookings', :action => 'getCinema'),:'data-type' => 'json'%>
+
+
+<%= select_tag :show_id, "<option>Please select!</option>" %> 
+  
+  
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

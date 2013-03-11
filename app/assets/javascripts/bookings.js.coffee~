@@ -2,16 +2,20 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-jQuery ->
-  $('#booking_show_id').parent().hide()
-  shows = $('#booking_show_id').html()
-  $('#booking_cinema_id').change ->
-    cinema = $('#show_cinema_id :selected').text()
-    escaped_cinema = cinema.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-    options = $(shows).filter("optgroup[label='#{escaped_cinema}']").html()
-    if options
-      $('#booking_show_id').html(options)
-      $('#booking_show_id').parent().show()
-    else
-      $('#booking_show_id').empty()
-      $('#booking_show_id').parent().hide()
+$(document).ready(function() {
+  $('#cinema_id').live('ajax:success', function(evt, data, status, xhr) {
+        var selectbox2 = $('#show_id');
+
+      selectbox2.empty();
+
+ 
+    $.each(data, function(index, value) {
+           var opt = $('<option/>');
+                 opt.attr('value', value[0]);
+         	 opt.text(value[1]);
+                 opt.appendTo(selectbox2);
+    });
+  });
+
+});
+

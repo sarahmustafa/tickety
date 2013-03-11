@@ -1,13 +1,15 @@
 Tickety::Application.routes.draw do
 
 
-resources :movies do
-get :autocomplete_movie_title, :on => :collection
-end
+
 
 resources :movies do
 get :auto_complete_for_movie_title , :on => :collection
 end
+
+ resources :bookings do
+get :getCinema
+    end
 
   resources :movies
 
@@ -37,7 +39,6 @@ match 'logout' => 'user_sessions#destroy', :as => :logout
  # get "user_sessions/destroy"
 
   resources :users
-
 
 
 
