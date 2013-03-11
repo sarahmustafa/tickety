@@ -1,4 +1,5 @@
 class CinemasController < ApplicationController
+ load_and_authorize_resource
   # GET /cinemas
   # GET /cinemas.json
   def index

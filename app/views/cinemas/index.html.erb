@@ -5,23 +5,26 @@
   <tr>
     <th>Name</th>
     <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
+  
   </tr>
 
 <% @cinemas.each do |cinema| %>
   <tr>
     <td><%= cinema.name %></td>
     <td><%= cinema.location %></td>
+
+<% if can? :manage, @cinema %>
     <td><%= link_to 'Show', cinema %></td>
     <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
     <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
+<% if can? :manage, @cinema %>
 <%= link_to 'New Cinema', new_cinema_path, :class => 'button' %>
+<% end %>
 </center>

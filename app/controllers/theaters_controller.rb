@@ -1,4 +1,5 @@
 class TheatersController < ApplicationController
+load_and_authorize_resource
   # GET /theaters
   # GET /theaters.json
   def index

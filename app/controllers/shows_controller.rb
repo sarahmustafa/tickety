@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+load_and_authorize_resource
  #autocomplete :movie, :title
 
   # GET /shows

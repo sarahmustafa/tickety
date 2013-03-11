@@ -34,12 +34,7 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Cinema ID</label>
-    <%= f.label :cinema_id %><br />
-    <%= f.collection_select :cinema_id, Cinema.order(:name), :id, :name, include_blank: true %>
-    </div>
+  
   </div>
 
 

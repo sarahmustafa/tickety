@@ -1,4 +1,5 @@
 class SeatsController < ApplicationController
+  load_and_authorize_resource
   # GET /seats
   # GET /seats.json
   def index

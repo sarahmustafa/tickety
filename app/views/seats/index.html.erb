@@ -29,5 +29,7 @@
 
 <br />
 
+<% if can? :manage, @seat %>
 <%= link_to 'New Seat', new_seat_path, :class => 'button' %>
+<% end %>
 </center>

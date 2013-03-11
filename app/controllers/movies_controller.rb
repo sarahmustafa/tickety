@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  load_and_authorize_resource
   # GET /movies
   # GET /movies.json
 autocomplete :movie, :title , :display_value => :funky_method

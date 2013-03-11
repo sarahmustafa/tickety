@@ -5,23 +5,28 @@
   <tr>
     <th>Cinema</th>
     <th>Theater number</th>
-    <th></th>
-    <th></th>
-    <th></th>
+ 
   </tr>
 
 <% @theaters.each do |theater| %>
   <tr>
     <td><%= theater.cinema.name %></td>
     <td><%= theater.theater_number %></td>
+	<% if can? :manage, @theater %>
+
     <td><%= link_to 'Show', theater %></td>
     <td><%= link_to 'Edit', edit_theater_path(theater) %></td>
     <td><%= link_to 'Destroy', theater, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
+
   </tr>
 <% end %>
 </table>
 
 <br />
 
+<% if can? :manage, @theater %>
 <%= link_to 'New Theater', new_theater_path, :class => 'button' %>
+<% end %>
+
 </center>
