@@ -8,7 +8,7 @@ class Ability
        if user.is_admin?
          can :new, Movie
        else
-	can :read, :all
+	cannot :read, :all
 
        end
     #
