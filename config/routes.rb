@@ -1,7 +1,15 @@
 Tickety::Application.routes.draw do
 
-
-
+  match 'home' => "pages#index"
+  match 'newreleases' => "pages#newreleases"
+  match 'currentlyshowing' => "pages#currentlyshowing"
+  match 'rewardsystem' => "pages#CRS"
+  match 'signin' => "pages#signin"
+  match 'policies' => "pages#policies"
+  match 'creators' => "pages#creators"
+  match 'webinfo' => "pages#webinfo"
+  
+  root :to => "pages#index"
 
 resources :movies do
 get :auto_complete_for_movie_title , :on => :collection
@@ -25,7 +33,6 @@ get :getCinema , :on => :collection
 
   resources :bookings
 
-root :to => 'users#index'
 resources :user_sessions
 resources :users
   

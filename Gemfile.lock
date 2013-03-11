@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.8)
       actionpack (= 3.2.8)
@@ -106,7 +106,6 @@ GEM
     mime-types (1.21)
     multi_json (1.6.1)
     multipart-post (1.1.5)
-    mysql2 (0.3.11)
     netrc (0.7.7)
     nokogiri (1.5.5)
     oauth (0.4.7)
@@ -215,7 +214,6 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
-  mysql2
   rails (= 3.2.8)
   rails3-jquery-autocomplete
   rspec-rails (>= 2.8.1)

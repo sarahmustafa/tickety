@@ -57,3 +57,55 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Booking Date</label>
+	   <%= f.date_select :booking_date, :class => 'medium' %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Customer ID</label>
+    <%= f.number_field :customer_id %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Show Time</label>
+     <%= f.time_select :show_time %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Movie ID</label>
+    <%= f.number_field :movie_id %>
+      </div>
+    </div>
+
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Cinema ID</label>
+    <%= f.number_field :cinema_id %>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns">
+        <label>Payment ID</label>
+    <%= f.number_field :payment_id %>
+      </div>
+    </div>
+
+
+	<br/>
+	<br/>
+	<center>
+	<input type="Submit" value="Submit" class="button"> 
+	</center>
+	<% end %>
+

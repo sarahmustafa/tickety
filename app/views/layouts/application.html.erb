@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tickety</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-   
+  <%= render 'layouts/shim' %>   
 
 </head>
 <body>
   <div id="nav">
+	<%= render 'layouts/header' %>
     <% if current_user %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
       <%= link_to "Logout", :logout %>
@@ -22,7 +23,10 @@
     <p id="notice"><%= notice %></p>
     <p id="alert"><%= alert %></p>
   </div>
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+	<%= render 'layouts/footer' %>
+  </div>
 
 </body>
 </html>
