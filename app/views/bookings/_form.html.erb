@@ -21,7 +21,7 @@
     <%= "Movie genre: " %> <%= @movie_details.genre %>
   </div>
 
-<a> Movie is availabile in: </a> <br />
+<a> Movie is available in: </a> <br />
 <table>
 <tr>
 <th>Cinema</th>
@@ -29,77 +29,25 @@
 <th>Date</td>
 <th> </th>
 </tr>
+
+<tr>
 <% @shows.each do |show| %>
 
 <td> <%= link_to show.cinema.name, :controller => "cinemas", :action => "show", :id => show.cinema.id %> </td> 
 <td> <%= link_to show.show_time, :controller => "shows", :action => "show", :id => show.id %> </td> 
 <td> <%= link_to show.show_date, :controller => "shows", :action => "show", :id => show.id %> </td> 
 <td>  <%= link_to "Book", :controller => "seats", :action => "new", :show_id => show.cinema.id %> </td> 
-
+</tr>
+<% end %>
 <br />
 </table>
-<% end %>
-
-
-  
-
-
-<%= select_tag :cinema_id, options_from_collection_for_select(@cinemas, "id", "name"),:'data-remote' => 'true',:'data-url' => url_for(:controller => 'bookings', :action => 'getCinema'),:'data-type' => 'json'%>
-
-
-<%= select_tag :show_id, "<option>Please select!</option>" %> 
-  
-  
-
-
 
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Booking Date</label>
-	   <%= f.date_select :booking_date, :class => 'medium' %>
-      </div>
-    </div>
-
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Customer ID</label>
-    <%= f.number_field :customer_id %>
-      </div>
-    </div>
-
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Show Time</label>
-     <%= f.time_select :show_time %>
-      </div>
-    </div>
-
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Movie ID</label>
-    <%= f.number_field :movie_id %>
-      </div>
-    </div>
 
 
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Cinema ID</label>
-    <%= f.number_field :cinema_id %>
-      </div>
-    </div>
-
-  <div class="row">
-      <div class="large-12 columns">
-        <label>Payment ID</label>
-    <%= f.number_field :payment_id %>
-      </div>
-    </div>
+ 
 
 
 	<br/>
@@ -107,5 +55,4 @@
 	<center>
 	<input type="Submit" value="Submit" class="button"> 
 	</center>
-	<% end %>
-
+<% end %>
