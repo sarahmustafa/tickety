@@ -1,0 +1,87 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://foundation.zurb.com/docs/assets/normalize.css" />
+    <link rel="stylesheet" href="http://foundation.zurb.com/docs/assets/docs.css" />
+    <script src="http://foundation.zurb.com/docs/assets/vendor/custom.modernizr.js"></script>
+	</head>
+	
+	<body>
+	<div class="center hero-unit">
+<br><br><br>
+
+</div>
+
+<!-- Content Slider -->
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row">
+      <div class="large-9 small-centered columns">
+        <ul id="featured1" data-orbit>
+          <li>
+            <img src="assets/gsquad.jpg" />
+          </li>
+          <li>
+            <img src="assets/miserables.jpg" />
+          </li>
+          <li>
+            <img src="assets/argo.jpg" />
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+
+
+<!-- End Content Slider -->
+
+<!-- search -->
+<div class="row">
+  <div class="small-3 small-centered columns">
+	
+	<class="has-form">
+	  <form>
+	    <div class="row collapse">
+	      <div class="small-8 columns">
+	        <input type="text">
+	      </div>
+	      <div class="small-4 columns">
+	        <a href="#" class="alert button">Search</a>
+                <%= text_field_tag "Search", data: {autocomplete_source: Movie.order(:title).map(&:title)} %>
+	      </div>
+	    </div>
+	  </form>
+	
+	</div>
+</div>
+
+<!-- end search -->
+
+<script>
+
+  // Google Analytics
+  var _gaq = _gaq || [];
+  _gaq.push(
+    ['_setAccount', 'UA-2195009-2'],
+    ['_trackPageview'],
+    ['b._setAccount', 'UA-2195009-27'],
+    ['b._trackPageview']
+  );
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  document.write('<script src="http://foundation.zurb.com/docs/assets/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js"><\/script>');
+</script>
+<script src="http://foundation.zurb.com/docs/assets/docs.js"></script>
+<script>
+  $(document).foundation()
+             .foundation('joyride', 'start');
+</script>
+</body>
+</html>
