@@ -11,48 +11,74 @@
 			</div>
 		</div>
 		
-<!-- navigation>
 
 <!-- Navigation -->
+<div class="contain-to-grid sticky">
+ 	<nav class="top-bar">
+	  <ul class="title-area">
+	    <!-- Title Area -->
+	    <li class="name">
+	      <h1><a href="/"> Tickety </a></h1>
+	    </li>
+	    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  </ul>
 
-  <nav class="top-bar">
+	  <section class="top-bar-section">
+	    <!-- Left Nav Section -->
+	    <ul class="left">
 
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="left">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <%= link_to "Home", root_path %>
-          <ul class="dropdown">
-            <li><label>ّInformation</label></li>
+	      <li class="divider"></li>
+	      <li class="has-dropdown"><a href="#">Home</a>
 
-			<li><%= link_to "Website", webinfo_path %></li>
-			<li><%= link_to "Policies", policies_path %></li>
-			<li><%= link_to "Creators", creators_path %></li>
-            <li class="divider"></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-	        <li class="has-dropdown">
-	          <a href="#">Currently Showing</a>
-	          <ul class="dropdown">
-	            <li><label>Sort By</label></li>
+	        <ul class="dropdown">
+				<li><%= link_to "Website Policies", policies_path %></li>
+				<li><%= link_to "Website Information", webinfo_path %></li>
+				<li><%= link_to "Website Developers", creators_path %></li>
+	        </ul>
+	      </li>
+	      <li class="divider"></li>
+			<li><%=link_to "Currently Showing", currentlyshowing_path %></li>
+	      <li class="divider"></li>
+			<li><%=link_to "New Releases", newreleases_path %></li>
+	      <li class="divider"></li>
+			<li><%=link_to "Customer Reward Program", rewardsystem_path %></li>
+	      <li class="divider"></li>
+	    </ul>
 
-	<li><%= link_to "Cinema", cinemas_path %></li>
-	<li><%= link_to "Show All", movies_path %></li>
-	            <li class="divider"></li>
-	          </ul>
-	        </li>
-		<li class="divider"></li>
-<li><%= link_to "New Releases", movies_path %></li>
-		<li class="divider"></li>
-<li><%= link_to "Customer Reward System", rewardsystem_path %></li>
-        <li class="divider"></li>
-		<li class="divider"></li>
-<li><%= link_to "Login", login_path %></li>
-      </ul>
-    </section>
-  </nav>
+	    <!-- Right Nav Section -->
+	    <ul class="right">
+	      <li class="divider hide-for-small"></li>
+	      <li><%= link_to "Login", login_path %>
+
+	        <ul class="dropdown">
+	          <li><label>Dropdown Level 1 Label</label></li>
+
+	          <li class="divider"></li>
+	          <li><a href="#">See all &rarr;</a></li>
+	        </ul>
+	      </li>
+	      <li class="divider"></li>
+	      <li class="has-form">
+	        <form>
+	          <div class="row collapse">
+	            <div class="small-8 columns">
+	              <input type="text">
+	            </div>
+	            <div class="small-4 columns">
+	              <a href="#" class="alert button">Search</a>
+	            </div>
+	          </div>
+	        </form>
+	      </li>
+	      <li class="divider show-for-small"></li>
+
+	    </ul>
+	  </section>
+	</nav>
+
+</div>
+
 
 
 

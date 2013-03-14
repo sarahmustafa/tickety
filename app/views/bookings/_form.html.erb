@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
+<div class="panel", width:100px>
+	       <div class="row">
+	                <div class="large-6 columns" style="width:200px">
+	      <img src="http://collider.com/wp-content/uploads/oz-the-great-and-powerful-poster4.jpg" />
+	</div>
 
 
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
   <div class="field">
-    <%= "Movie Details" %><br />
-    <%= "Movie Title: " %> <%= @movie_details.title %><br />
-    <%= "Movie Summary: " %> <%= @movie_details.summary %><br />
-    <%= "Movie genre: " %> <%= @movie_details.genre %>
+	<h3><%= "Movie Details" %></h3><br />
+	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @movie_details.title %><br /> </h6>
+	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @movie_details.summary %><br /></h6>
+	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @movie_details.genre %></h6>
   </div>
-
+	</div>
+</div>
+<center>
 <a> Movie is available in: </a> <br />
+
 <table>
 <tr>
 <th>Cinema</th>
@@ -41,18 +49,11 @@
 <% end %>
 <br />
 </table>
+</center>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 
 
  
 
 
-	<br/>
-	<br/>
-	<center>
-	<input type="Submit" value="Submit" class="button"> 
-	</center>
 <% end %>
