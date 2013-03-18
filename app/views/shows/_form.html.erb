@@ -1,3 +1,15 @@
+<head>
+
+ 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+ 
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="stylesheets/foundation.min.css">
+
+
+</head>
 
 <%= form_for(@show) do |f| %>
   <% if @show.errors.any? %>
@@ -12,51 +24,51 @@
     </div>
   <% end %>
 
-
   <div class="row">
     <div class="large-12 columns">
-      <label>Show Time</label>
+    <%= f.label :show_time %><br />
     <%= f.time_select :show_time %>
-    </div>
   </div>
+</div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Show Date</label>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :show_date %><br />
     <%= f.date_select :show_date %>
-    </div>
   </div>
+</div>
 
   <div class="row">
     <div class="large-12 columns">
-      <label>Show Type</label>
+    <%= f.label :show_type %><br />
     <%= f.text_field :show_type %>
-    </div>
   </div>
-
-  
-  </div>
-
+</div>
 
   <div class="row">
     <div class="large-12 columns">
-      <label>Theater ID</label>
+    <%= f.label :cinema_id %><br />
+    <%= f.collection_select :cinema_id, Cinema.order(:name), :id, :name, include_blank: true %>
+       </div>
+	</div>
+
+  	  <div class="row">
+	    <div class="large-12 columns">
+    <%= f.label :theater_id, "Theater" %><br />
     <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
-    </div>
   </div>
+</div>
 
-  <div class="row">
+	<div class="row">
     <div class="large-12 columns">
-      <label>Movie Title</label>
+<%= f.label :movie_title %>
 <%= f.text_field :movie_title, data: {autocomplete_source: Movie.order(:title).map(&:title)} %>
-    </div>
-  </div>
+	</div>
+	</div>   
 
-   </div>
-
-<br/>
-<br/>
-<center>
-<input type="Submit" value="Submit" class="button"> 
-</center>
-<% end %>
+	<br/>
+	<br/>
+	<center>
+	<input type="Submit" value="Submit" class="button"> 
+	</center>
+	<% end %>
