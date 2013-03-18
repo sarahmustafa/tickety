@@ -7,13 +7,8 @@ class Movie < ActiveRecord::Base
   validates :duration, :numericality => {:greater_than => 0, :only_integer => true, :allow_blank => true, :allow_nil => true}
 accepts_nested_attributes_for :shows
 
-
   def funky_method
     "#{self.title}"
   end
-
-
-
-
 
 end
