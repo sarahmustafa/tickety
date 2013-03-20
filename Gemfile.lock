@@ -46,7 +46,7 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.1)
+    cocaine (0.5.0)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -112,7 +112,7 @@ GEM
     mime-types (1.21)
     mocha (0.12.7)
       metaclass (~> 0.0.1)
-    multi_json (1.7.0)
+    multi_json (1.7.1)
     multipart-post (1.2.0)
     netrc (0.7.7)
     nokogiri (1.5.6)
@@ -223,6 +223,7 @@ DEPENDENCIES
   bcrypt-ruby
   cancan
   capybara (>= 1.1.2)
+  cocaine (= 0.5.0)
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.1)
   database_cleaner
