@@ -1,3 +1,6 @@
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -11,49 +14,49 @@
     </div>
   <% end %>
 
+<div class="panel", width:100px>
+	       <div class="row">
+	                <div class="large-6 columns" style="width:200px">
+	      <%= image_tag @show.movie.movie_image.url %>
+	</div>
 
 
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
+<%= f.hidden_field :show_id, :value => @show.id %>
   <div class="field">
-    <%= "Movie Details" %><br />
-    <%= "Movie Title: " %> <%= @movie_details.title %><br />
-    <%= "Movie Summary: " %> <%= @movie_details.summary %><br />
-    <%= "Movie genre: " %> <%= @movie_details.genre %>
+	<h3><%= "Movie Details" %></h3><br />
+	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @show.movie.title %><br /> </h6>
+	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @show.movie.summary %><br /></h6>
+	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @show.movie.genre %></h6>
+  <h4><%= "Location: " %><br /> </h4><h6><%= @show.cinema.name %></h6>
+<h4><%= "Time: " %><br /> </h4><h6><%= @show.show_time.strftime('%H:%M %p') %> on  <%= @show.show_date %> </h6>
+
   </div>
+	</div>
+</div>
+<center>
 
-<a> Movie is availabile in: </a> <br />
-<table>
-<tr>
-<th>Cinema</th>
-<th>Time</td>
-<th>Date</td>
-<th> </th>
-</tr>
-<% @shows.each do |show| %>
 
-<td> <%= link_to show.cinema.name, :controller => "cinemas", :action => "show", :id => show.cinema.id %> </td> 
-<td> <%= link_to show.show_time, :controller => "shows", :action => "show", :id => show.id %> </td> 
-<td> <%= link_to show.show_date, :controller => "shows", :action => "show", :id => show.id %> </td> 
-<td>  <%= link_to "Book", :controller => "seats", :action => "new", :show_id => show.cinema.id %> </td> 
-
-<br />
-</table>
+<h4><%= "select seats" %></h4>
+<% for seat in Seat.where(:theater_id => @theaterid) %>
+<div>
+  <%= check_box_tag "booking[seat_ids]", seat.id, nil,@booking.seats.include?(seat), :disabled => seat.is_taken? %>
+  <%= seat.number %>
+</div>
 <% end %>
 
 
-  
 
 
-<%= select_tag :cinema_id, options_from_collection_for_select(@cinemas, "id", "name"),:'data-remote' => 'true',:'data-url' => url_for(:controller => 'Booking', :action => 'getCinema'),:'data-type' => 'json'%>
-
-
-<%= select_tag :show_id, "<option>Please select!</option>" %> 
-  
-  
-
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<input type="Submit" value="Submit" class="button">
+</center>
 <% end %>
+
+
+
+<h4> Seat Layout:</h4>
+   
+
+ 
+
+

@@ -2,20 +2,26 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$(document).ready(function() {
-  $('#cinema_id').live('ajax:success', function(evt, data, status, xhr) {
-        var selectbox2 = $('#show_id');
 
-      selectbox2.empty();
+jQuery ->
+$("." + settings.seatCss).click ->
+  if $(this).hasClass(settings.selectedSeatCss)
+    alert "This seat is already reserved"
+  else
+    $(this).toggleClass settings.selectingSeatCss
 
- 
-    $.each(data, function(index, value) {
-           var opt = $('<option/>');
-                 opt.attr('value', value[0]);
-         	 opt.text(value[1]);
-                 opt.appendTo(selectbox2);
-    });
-  });
+$("#btnShow").click ->
+  str = []
+  $.each $("#place li." + settings.selectedSeatCss + " a, #place li." + settings.selectingSeatCss + " a"), (index, value) ->
+    str.push $(this).attr("title")
 
-});
+  alert str.join(",")
 
+$("#btnShowNew").click ->
+  str = []
+  item = undefined
+  $.each $("#place li." + settings.selectingSeatCss + " a"), (index, value) ->
+    item = $(this).attr("title")
+    str.push item
+
+  alert str.join(",")

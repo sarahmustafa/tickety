@@ -4,7 +4,7 @@ class CreateSeats < ActiveRecord::Migration
       t.integer :number
       t.string :type
       t.integer :theater_id
-      t.boolean :is_taken
+      t.boolean :is_taken, :default => false
       t.integer :booking_id
 
       t.timestamps
