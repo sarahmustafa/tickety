@@ -27,15 +27,31 @@ class BookingsController < ApplicationController
   def new
     @cinemas = Cinema.all
     @timings = []
+    @booking = Booking.new
+    @current_user = current_user
+    @show = Show.find(params[:show_id])
+    @theaterid = @show.theater.id
+   #@movie_details = Movie.find_by_id(@movie);
+   #@cinema = params[:cin_id]
+   #@shows = Show.all(:order => 'updated_at DESC ', :conditions => ["movie_id = #{@cinema}"])
+   # @shows = @movie_details.shows.order("cinema_id DESC , show_date ASC, show_time ASC")
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @booking }
+    end
+  end
+
+ def prebooking
+    @cinemas = Cinema.all
+    @timings = []
 
     @booking = Booking.new
     @current_user = current_user
-    #@movie = params[:mov_id]
-    movie = 1
-    @movie_details = Movie.find_by_id(1);
+    @movie = params[:mov_id]
+    @movie_details = Movie.find_by_id(@movie);
     @cinema = params[:cin_id]
     #@shows = Show.all(:order => 'updated_at DESC ', :conditions => ["movie_id = #{@cinema}"])
-    @shows = Movie.find_by_id(1).shows.order("cinema_id DESC , show_date ASC, show_time ASC")
+    @shows = @movie_details.shows.order("cinema_id DESC , show_date ASC, show_time ASC")
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @booking }
@@ -84,10 +100,28 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(params[:booking])
+    @show = @booking.show
+    
+	case
+	 when @show.show_type == "Regular"
+ 	  @booking.price = 35
+	 when @show.show_type == "IMAX 3D"
+ 	  @booking.price =  45
+	 when @show.show_type == "RealD 3D" 
+ 	  @booking.price =  45
+         when @show.show_type == "Dolby Digital 3D"
+ 	  @booking.price =  45
+	end
 
+    @booking.user_id = current_user.id
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
+
+        @selectingseats = @booking.seats
+	@selectingseats.each { |n| n.update_attribute(:is_taken, true) }
+
+        format.html { redirect_to new_payment_path(:booking_id => @booking.id), notice: 'Booking was successfully created.' }
+        #render :action => 'show', :id => @test
         format.json { render json: @booking, status: :created, location: @booking }
       else
         format.html { render action: "new" }

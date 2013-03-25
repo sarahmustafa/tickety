@@ -1,0 +1,61 @@
+<%= form_for(@booking) do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="panel", width:100px>
+	       <div class="row">
+	                <div class="large-6 columns" style="width:200px">
+	      <%= image_tag @movie_details.movie_image.url %>
+	</div>
+
+
+<%= f.hidden_field :customer_id, :value => @current_user.id %>
+  <div class="field">
+	<h3><%= "Movie Details" %></h3><br />
+	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @movie_details.title %><br /> </h6>
+	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @movie_details.summary %><br /></h6>
+	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @movie_details.genre %></h6>
+  </div>
+	</div>
+</div>
+<center>
+<a> Movie is available in: </a> <br />
+
+<table>
+<tr>
+<th>Cinema</th>
+<th>Time</td>
+<th>Date</td>
+<th> </th>
+</tr>
+
+<tr>
+<% @shows.each do |show| %>
+
+<td> <%= link_to show.cinema.name, :controller => "cinemas", :action => "show", :id => show.cinema.id %> </td> 
+<td> <%= link_to show.show_time, :controller => "shows", :action => "show", :id => show.id %> </td> 
+<td> <%= link_to show.show_date, :controller => "shows", :action => "show", :id => show.id %> </td> 
+<td> <%= link_to "Book", :controller => "bookings", :action => "new", :show_id => show.id %> </td>
+
+
+</tr>
+<% end %>
+<br />
+</table>
+</center>
+
+
+
+ 
+
+
+<% end %>

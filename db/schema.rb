@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314105231) do
+ActiveRecord::Schema.define(:version => 20130324095206) do
 
   create_table "bookings", :force => true do |t|
     t.date     "booking_date"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130314105231) do
     t.integer  "show_id"
     t.integer  "num_seat"
     t.integer  "user_id"
+    t.integer  "price"
   end
 
   create_table "cinemas", :force => true do |t|
@@ -60,10 +61,10 @@ ActiveRecord::Schema.define(:version => 20130314105231) do
     t.integer  "number"
     t.string   "type"
     t.integer  "theater_id"
-    t.boolean  "is_taken"
+    t.boolean  "is_taken",   :default => false
     t.integer  "booking_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "shows", :force => true do |t|

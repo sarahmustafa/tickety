@@ -1,0 +1,5 @@
+class SeatDefault < ActiveRecord::Migration
+  def change
+    change_column :seat, :is_taken, :type, default: "Your value"
+  end
+end
