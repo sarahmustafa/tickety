@@ -17,7 +17,9 @@ end
 
  resources :bookings do
 get :getCinema , :on => :collection
+get :prebooking , :on => :collection
     end
+
 
   resources :movies
 
