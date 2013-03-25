@@ -26,7 +26,7 @@
 				</br>
 				<div class="row">
 				  <div class="large-6 columns">	
-				<%= link_to "Book", :class => 'button', :controller => "bookings", :action => "new", :mov_id => movie.id %> 
+				<%= link_to "Book", :controller => "bookings", :action => "prebooking", :mov_id => movie.id %> 
 				  <div class="large-6 columns">
 				<a href="http://www.youtube.com" class="tiny button">Watch Trailer</a></div>
 				</div>
