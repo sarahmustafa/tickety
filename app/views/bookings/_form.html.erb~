@@ -38,12 +38,14 @@
 
 
 <h4><%= "select seats" %></h4>
-<% for seat in Seat.where(:is_taken => 'false', :theater_id => @theaterid) %>
+<% for seat in Seat.where(:theater_id => @theaterid) %>
 <div>
-  <%= check_box_tag "booking[seat_ids][]", seat.id, @booking.seats.include?(seat),  :disabled => seat.is_taken? %>
+  <%= check_box_tag "booking[seat_ids]", seat.id, nil,@booking.seats.include?(seat), :disabled => seat.is_taken? %>
   <%= seat.number %>
 </div>
 <% end %>
+
+
 
 
 <input type="Submit" value="Submit" class="button">
