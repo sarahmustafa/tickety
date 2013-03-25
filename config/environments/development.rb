@@ -1,13 +1,11 @@
 Tickety::Application.configure do
 
-<<<<<<< HEAD
-
 Paperclip.options[:command_path] = "/usr/local/bin/"
 
 Paperclip.options.merge!(:command_path => "/usr/local/bin")
-=======
+
 Paperclip.options.merge!(:command_path => "/usr/bin")
->>>>>>> f15f6725a822c77207d39429917e09a2830553cd
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
