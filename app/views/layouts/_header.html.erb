@@ -1,89 +1,53 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/">Tickety </a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="/"><span>Menu</span></a></li>
+  </ul>
 
-		<div class="row">
-		  <div class="small-6 small-centered columns">
-				<div id="logo">
-				        <a href="\">
-				            <img src="assets/Tickety2.jpg" alt="Logo for Tickety" /></a>
-				    </div>
-			</div>
-		</div>
-		
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
 
-<!-- Navigation -->
-<div class="contain-to-grid sticky">
- 	<nav class="top-bar">
-	  <ul class="title-area">
-	    <!-- Title Area -->
-	    <li class="name">
-	      <h1><a href="/"> Tickety </a></h1>
-	    </li>
-	    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	  </ul>
+      <li class="divider"></li>
+      <li class="has-dropdown"><a href="#">Home</a>
 
-	  <section class="top-bar-section">
-	    <!-- Left Nav Section -->
-	    <ul class="left">
+        <ul class="dropdown">
+			<li><%= link_to "Website Policies", policies_path %></li>
+			<li><%= link_to "Website Information", webinfo_path %></li>
+			<li><%= link_to "Website Developers", creators_path %></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+		<li><%=link_to "Currently Showing", currentlyshowing_path %></li>
+      <li class="divider"></li>
+		<li><%=link_to "New Releases", newreleases_path %></li>
+      <li class="divider"></li>
+		<li><%=link_to "Customer Reward Program", rewardsystem_path %></li>
+      <li class="divider"></li>
+    </ul>
 
-	      <li class="divider"></li>
-	      <li class="has-dropdown"><a href="#">Home</a>
-
-	        <ul class="dropdown">
-				<li><%= link_to "Website Policies", policies_path %></li>
-				<li><%= link_to "Website Information", webinfo_path %></li>
-				<li><%= link_to "Website Developers", creators_path %></li>
-	        </ul>
-	      </li>
-	      <li class="divider"></li>
-			<li><%=link_to "Currently Showing", currentlyshowing_path %></li>
-	      <li class="divider"></li>
-			<li><%=link_to "New Releases", newreleases_path %></li>
-	      <li class="divider"></li>
-			<li><%=link_to "Customer Reward Program", rewardsystem_path %></li>
-	      <li class="divider"></li>
-	    </ul>
-
-	    <!-- Right Nav Section -->
+ 	 <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li class="divider hide-for-small"></li>
-	      <li><%= link_to "Login", login_path %>
+			 <% if current_user %>
+					      <li class="has-dropdown"><a href="#">Account</a>
 
-	        <ul class="dropdown">
-	          <li><label>Dropdown Level 1 Label</label></li>
-
-	          <li class="divider"></li>
-	          <li><a href="#">See all &rarr;</a></li>
-	        </ul>
-	      </li>
+					        <ul class="dropdown">
+			                <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
+			                <li class="divider"></li>
+			                <li><%= link_to "Logout", :logout %> </li>
+			              </ul>
+			              </li>
+				    <% else %>
+				     <li> <%= link_to "Register", new_user_path %> </li>
+				     <li> <%= link_to "Login", :login %></li>
+				    <% end %>
+			 </li>
 	      <li class="divider"></li>
-	      <li class="has-form">
-	        <form>
-	          <div class="row collapse">
-	            <div class="small-8 columns">
-	              <input type="text">
-	            </div>
-	            <div class="small-4 columns">
-	              <a href="#" class="alert button">Search</a>
-	            </div>
-	          </div>
-	        </form>
-	      </li>
 	      <li class="divider show-for-small"></li>
-
 	    </ul>
 	  </section>
 	</nav>
-
-</div>
-
-
-
-
-	  <!-- End Top Bar -->
-
-    </div>
-  </div>
-</header>
