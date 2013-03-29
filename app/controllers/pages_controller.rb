@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def currentlyshowing
+    @allmovies = Movie.order("created_at desc")
   end
 
   def index
