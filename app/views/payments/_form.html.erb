@@ -11,6 +11,17 @@
       </ul>
     </div>
   <% end %>
+<%= f.hidden_field :customer_id, :value => current_user.id %>
+<label> Movie Details </label>
+<div class="field">
+	<h3><%= "Movie Details" %></h3><br />
+	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @booking.show.movie.title %><br /> </h6>
+	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @booking.show.movie.summary %><br /></h6>
+	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @booking.show.movie.genre %></h6>
+  <h4><%= "Location: " %><br /> </h4><h6><%= @booking.show.cinema.name %></h6>
+<h4><%= "Time: " %><br /> </h4><h6><%= @booking.show.show_time.strftime('%H:%M %p') %> on  <%= @booking.show.show_date %> </h6>
+
+  </div>
 
   <div class="row">
     <div class="large-12 columns">
@@ -26,13 +37,7 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Customer ID</label>
-    <%= f.number_field :customer_id %>
-    </div>
-  </div>
-
+ 
 
 <br/>
 <br/>
