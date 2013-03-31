@@ -1,7 +1,7 @@
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
-<%= form_for(@booking) do |f| %>
+<%= semantic_form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
@@ -38,13 +38,10 @@
 
 
 <h4><%= "select seats" %></h4>
-<% for seat in Seat.where(:theater_id => @theaterid) %>
-<div>
-  <%= check_box_tag "booking[seat_ids][]", seat.id, @booking.seats.include?(seat), :disabled => seat.is_taken? %>
-  <%= seat.number %>
-</div>
-<% end %>
 
+<%= f.inputs do %>
+      <%= f.input :seats, :as => :check_boxes, :collection => Seat.where(:theater_id => @theaterid), :disabled => seats.is_taken? %>
+<%end%>
 
 
 

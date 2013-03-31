@@ -86,12 +86,12 @@ ActiveRecord::Schema.define(:version => 20130324095206) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",         :null => false
-    t.string   "email"
+    t.string   "username",                           :null => false
+    t.string   "email",                              :null => false
     t.string   "crypted_password"
     t.string   "salt"
     t.string   "name"
-    t.boolean  "is_customer"
+    t.boolean  "is_customer",      :default => true
     t.boolean  "is_admin"
     t.boolean  "is_manager"
     t.integer  "reward_points"
@@ -99,8 +99,8 @@ ActiveRecord::Schema.define(:version => 20130324095206) do
     t.integer  "creditcard_num"
     t.string   "creditcard_type"
     t.integer  "security_num"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
 end
