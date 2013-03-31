@@ -23,7 +23,11 @@ body {
 
 a:focus {
   outline: none; }
-
+#gallery
+{
+     text-align:center;
+	max-width: 10%;
+}
 img,
 object,
 embed {

@@ -6,6 +6,7 @@ gem "bcrypt-ruby"
 gem 'rails3-jquery-autocomplete'
 gem "cancan"
 gem "paperclip"
+gem 'cocaine', '0.5.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

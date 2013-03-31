@@ -1,57 +1,107 @@
-<html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+
 <head>
-	<%= javascript_include_tag "vendor/custom.modernizr" %>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</html>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+  <meta charset="utf-8" /><!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Tickety</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="css/foundation.css" type="text/css" />
+  <script src="js/vendor/custom.modernizr.js" type="text/javascript">
+</script>
+</head>
+
 <body>
+<<<<<<< HEAD
+	
 </br></br></br>
 <div class="row">
     <div class="large-12 columns">
  
-
       <!-- Thumbnails -->
  
         <div class="row">
- <!--- for loop start -->
-
-<% @newrelease.each do |movie| %>
-
-          <div class="large-3 small-6 columns">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+		<div class="large-3 small-6 columns">
+      	
+			<% @newrelease.each do |movie| %>
             <%= image_tag movie.movie_image.url %>
             <div class="panel">
-              <div class="field">
-				    <h5><%= "Movie Title: " %> <br /></h5><%= movie.title  %><br /> 
-				    <h5><%= "Movie genre: " %><br /> </h5><%= movie.genre  %>
-				  </div>
-				</br>
+
+              	<h5><%= "Movie Title: " %> <br /></h5><%= movie.title  %><br /> 
+				<h5><%= "Movie genre: " %><br /> </h5><%= movie.genre  %><br />
+            </div>
+
 				<div class="row">
 				  <div class="large-6 columns">	
 				<%= link_to "Book", :controller => "bookings", :action => "prebooking", :mov_id => movie.id %> 
-				  <div class="large-6 columns">
-				<a href="http://www.youtube.com" class="tiny button">Watch Trailer</a></div>
+				  
+				<a href="http://www.youtube.com" class="tiny button">Watch Trailer</a>
 				</div>
+		
 
-            </div>
-<% end %>
+			</div>
+ 		<% end %>
 
-<!-- end loop -->
-          
- 
+</div>
+	
+
       <!-- End Thumbnails -->
  
+
  
  
- 
+=======
+  <center>
+    <div class="row">
+      <div class="large-12 columns">
+        <h3>New Releases</h3>
+        <hr />
+
+        <div class="row">
+          <ul class="large-block-grid-4">
+            <% @newrelease.each do |movie| %>
+
+            <li>
+              <div class="poster">
+                <%= image_tag movie.movie_image.url %>
+              </div>
+
+              <div class="panel">
+                <%= "Movie Title: " %><br/>
+                <%= movie.title  %><br />
+                <%= "Movie genre: " %><br/>
+                <%= movie.genre  %><br />
+                <br />
+                <%= link_to "Buy Ticket", :controller => "bookings", :action => "prebooking", :mov_id => movie.id, :class => 'button' %>
+              </div>
+            </li><% end %>
+          </ul>
+        </div>
+      </div>
+>>>>>>> 8db43ef7ecbfe3b8b9df7818f5dc8624890f2887
     </div>
-  </div>
-
-<!-- Check for Zepto support, load jQuery if necessary -->
-<script>
-  document.write('<script src=/js/vendor/'
-    + ('__proto__' in {} ? 'zepto' : 'jquery')
-    + '.js><\/script>');
-</script>
-<script src="/js/foundation.min.js"></script>
-
+  </center><script type="text/javascript">
+//<![CDATA[
+  document.write('<script src=js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  //]]>
+  </script><script src="js/foundation.min.js" type="text/javascript">
+</script><script type="text/javascript">
+//<![CDATA[
+    $(document).foundation();
+  //]]>
+  </script><!-- End Footer -->
 </body>
 </html>

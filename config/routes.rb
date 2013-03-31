@@ -41,6 +41,9 @@ resources :users
 match 'login' => 'user_sessions#new', :as => :login
 match 'logout' => 'user_sessions#destroy', :as => :logout
 
+match 'signup',  to: 'user#new'
+
+
   #get "user_sessions/new"
 
   #get "user_sessions/create"
