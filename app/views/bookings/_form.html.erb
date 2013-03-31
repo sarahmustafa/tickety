@@ -38,6 +38,15 @@
 
 
 <h4><%= "select seats" %></h4>
+<<<<<<< HEAD
+<% for seat in Seat.where(:theater_id => @theaterid) %>
+<div>
+  <%= check_box_tag "booking[seat_ids][]", seat.id, false, :disabled => seat.is_taken? %>
+  <%= seat.number %>
+</div>
+<% end %>
+=======
+>>>>>>> upstream/master
 
 <%= f.inputs do %>
       <%= f.input :seats, :as => :check_boxes, :collection => Seat.where(:theater_id => @theaterid), :disabled => seats.is_taken? %>
