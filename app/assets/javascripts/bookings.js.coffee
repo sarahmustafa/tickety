@@ -47,6 +47,8 @@ $("." + settings.seatCss).click ->
     $(this).toggleClass settings.selectingSeatCss
 
 $("#btnShow").click ->
+
+
   str = []
   $.each $("#place li." + settings.selectedSeatCss + " a, #place li." + settings.selectingSeatCss + " a"), (index, value) ->
     str.push $(this).attr("title")
@@ -61,5 +63,13 @@ $("#btnShowNew").click ->
     str.push item
 
   alert str.join(",")
+
+$('#user').simpleImageCheck ->
+  image: 'user_unchecked.png',
+  imageChecked: 'user.png',
+  afterCheck: -> (isChecked) 
+    if (isChecked) {
+      // do something
+ 
 
 

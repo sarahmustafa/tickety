@@ -38,14 +38,19 @@
 
 
 <h4><%= "select seats" %></h4>
-<% for seat in Seat.where(:theater_id => @theaterid) %>
-<div>
-  <%= check_box_tag "booking[seat_ids]", seat.id, nil,@booking.seats.include?(seat), :disabled => seat.is_taken? %>
-  <%= seat.number %>
-</div>
+
+<% @x = 0 %>
+  <% (0..10).step(5) do |i| %>
+	<% @x = i %>
+<br />
+		 <% for j in 0..4  %>
+<% if @a[@x] %>
+		 	<%= check_box_tag "booking[seat_ids][]",@a[@x].id , false, :disabled => @a[@x].is_taken? %><%= @a[@x].number %>
+		<% @x+=1 %>
 <% end %>
-
-
+		<% end %>
+<br />
+        <% end %>
 
 
 <input type="Submit" value="Submit" class="button">
@@ -55,8 +60,11 @@
 
 
 <h4> Seat Layout:</h4>
-   
 
- 
+
+  
+
+
+
 
 
