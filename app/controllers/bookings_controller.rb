@@ -31,6 +31,7 @@ class BookingsController < ApplicationController
     @current_user = current_user
     @show = Show.find(params[:show_id])
     @theaterid = @show.theater.id
+    @a = Seat.where(:theater_id => @theaterid)
    #@movie_details = Movie.find_by_id(@movie);
    #@cinema = params[:cin_id]
    #@shows = Show.all(:order => 'updated_at DESC ', :conditions => ["movie_id = #{@cinema}"])
