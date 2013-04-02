@@ -64,12 +64,7 @@ $("#btnShowNew").click ->
 
   alert str.join(",")
 
-$('#user').simpleImageCheck ->
-  image: 'user_unchecked.png',
-  imageChecked: 'user.png',
-  afterCheck: -> (isChecked) 
-    if (isChecked) {
-      // do something
+
  
 
 

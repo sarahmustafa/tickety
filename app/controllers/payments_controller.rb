@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :booking
   # GET /payments
   # GET /payments.json
   def index
@@ -51,6 +51,7 @@ class PaymentsController < ApplicationController
     respond_to do |format|
       if @payment.save
         @user.save
+        UserMailer.ticket_confirmation(@user).deliver
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
         format.json { render json: @payment, status: :created, location: @payment }
       else

@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :current_user, :prebooking, :payment, :seats, :bookings, :create, :new
   # GET /bookings
   # GET /bookings.json
   def index
@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
     @current_user = current_user
     @show = Show.find(params[:show_id])
     @theaterid = @show.theater.id
-    @a = Seat.where(:theater_id => @theaterid)
+    @a = Seat.where(:show_id => @show.id)
    #@movie_details = Movie.find_by_id(@movie);
    #@cinema = params[:cin_id]
    #@shows = Show.all(:order => 'updated_at DESC ', :conditions => ["movie_id = #{@cinema}"])
@@ -73,7 +73,7 @@ class BookingsController < ApplicationController
   def show_selected
   @booking = Booking.create(:show_id => params[:id])
   if @booking.save
-        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
+        format.html { redirect_to @booking}
         format.json { render json: @booking, status: :created, location: @booking }
       else
         format.html { render action: "new" }

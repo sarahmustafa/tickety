@@ -18,7 +18,4 @@
 //= require_tree .
 
 $(document).foundation();
-<<<<<<< HEAD
 
-=======
->>>>>>> e0cd87b43662a9260125c03bb4743cf5942fd654

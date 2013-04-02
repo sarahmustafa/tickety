@@ -49,6 +49,11 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @show.save
+        for i in 1..10
+         	@seats= Seat.new(:show_id => @show.id, :theater_id => @show.theater.id, :number => i)
+      	@seats.save
+      	end
+      	
         format.html { redirect_to @show, notice: 'Show was successfully created.' }
         format.json { render json: @show, status: :created, location: @show }
       else

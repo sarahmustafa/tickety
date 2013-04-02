@@ -19,47 +19,7 @@
 
 <body>
 
-</br></br></br>
-<div class="row">
-    <div class="large-12 columns">
- 
-      <!-- Thumbnails -->
- 
-        <div class="row">
- 
-          <div class="large-12 show-for-small columns">
-          <h3>Header</h3><hr>
-        </div>
- 
-		<div class="large-3 small-6 columns">
-      	
-			<% @newrelease.each do |movie| %>
-            <%= image_tag movie.movie_image.url %>
-            <div class="panel">
 
-              	<h5><%= "Movie Title: " %> <br /></h5><%= movie.title  %><br /> 
-				<h5><%= "Movie genre: " %><br /> </h5><%= movie.genre  %><br />
-            </div>
-
-				<div class="row">
-				  <div class="large-6 columns">	
-				<%= link_to "Book", :controller => "bookings", :action => "prebooking", :mov_id => movie.id %> 
-				  
-				<a href="http://www.youtube.com" class="tiny button">Watch Trailer</a>
-				</div>
-		
-
-			</div>
- 		<% end %>
-
-</div>
-	
-
-      <!-- End Thumbnails -->
- 
-
- 
- 
 
   <center>
     <div class="row">

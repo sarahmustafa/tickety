@@ -229,7 +229,6 @@ DEPENDENCIES
   bcrypt-ruby
   cancan
   capybara (>= 1.1.2)
-  cocaine (= 0.5.0)
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.1)
   database_cleaner

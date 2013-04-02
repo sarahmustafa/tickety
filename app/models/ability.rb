@@ -10,6 +10,7 @@ class Ability
        elsif user.is_customer?
 	       can :read, :all 
 	        can [:create, :new], [Booking, Payment]
+	        can :prebooking, Booking
  	       cannot :read, Seat
  	       can :update, Seat
         else
