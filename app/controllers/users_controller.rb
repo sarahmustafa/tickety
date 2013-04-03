@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   
   # GET /users
   # GET /users.json
@@ -6,7 +7,6 @@ skip_before_filter :require_login, :only => [:index, :new, :create]
 
   def index
     @users = User.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
@@ -46,7 +46,10 @@ skip_before_filter :require_login, :only => [:index, :new, :create]
     @user = User.new(params[:user])
 
     respond_to do |format|
+      
       if @user.save
+        #format.svg {render :qrcode => request.url, :level => :l, :unit => 10}
+      
         format.html { redirect_to :users, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else

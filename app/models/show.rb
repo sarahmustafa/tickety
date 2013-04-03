@@ -26,6 +26,14 @@ def movie_title=(title)
   self.movie = Movie.find_by_title(title) if title.present?
 end
 
-
+def self.clear_show
+  ActiveRecord::Base.logger.debug "test"
+  
+  t = Time.now
+  t2 = t + 15*60
+  if t2 > self.show_time
+    self.destroy
+  end
+end
 
 end

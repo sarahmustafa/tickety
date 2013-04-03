@@ -7,8 +7,10 @@ gem 'rails3-jquery-autocomplete'
 gem "cancan"
 gem "paperclip"
 
-gem 'rqrcode-rails3'
+gem 'rqrcode'
 gem 'mini_magick'
+
+gem 'whenever', require: false
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

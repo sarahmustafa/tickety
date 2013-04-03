@@ -1,5 +1,9 @@
 class PaymentsController < ApplicationController
   load_and_authorize_resource :booking
+  require 'rqrcode'
+  
+
+  
   # GET /payments
   # GET /payments.json
   def index
@@ -15,10 +19,13 @@ class PaymentsController < ApplicationController
   # GET /payments/1.json
   def show
     @payment = Payment.find(params[:id])
-
+    @code = @payment.id.to_s
+    @qr = RQRCode::QRCode.new(@code, :size => 1.3, :level => :h)
+    @show = @payment.bookings.last.show
+    
     respond_to do |format|
       format.html # show.html.erb
-      format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }
+     # format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }
       format.json { render json: @payment }
     end
   end
@@ -48,11 +55,15 @@ class PaymentsController < ApplicationController
     @user = User.find(current_user)
     @numtickets = @user.bookings.last.seats.count
     @user.reward_points = 5 * @numtickets
+    @updatebooking = @user.bookings.last
+    
     respond_to do |format|
       if @payment.save
+        @updatebooking.payment_id = @payment.id
+        @updatebooking.save
         @user.save
         UserMailer.ticket_confirmation(@user).deliver
-        format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
+        format.html { redirect_to @payment}
         format.json { render json: @payment, status: :created, location: @payment }
       else
         format.html { render action: "new" }
@@ -68,7 +79,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.update_attributes(params[:payment])
-        format.html { redirect_to @payment, notice: 'Payment was successfully updated.' }
+        format.html { redirect_to @payment}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

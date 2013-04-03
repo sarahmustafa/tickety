@@ -11,7 +11,8 @@
       </ul>
     </div>
   <% end %>
-<%= f.hidden_field :customer_id, :value => current_user.id %>
+<%= f.hidden_field :customer_id, :value => @current_user.id %>
+
 <label> Movie Details </label>
 <div class="field">
 	<h3><%= "Movie Details" %></h3><br />
