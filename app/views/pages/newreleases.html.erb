@@ -18,9 +18,6 @@
 </head>
 
 <body>
-
-
-
   <center>
     <div class="row">
       <div class="large-12 columns">
@@ -36,19 +33,18 @@
                 <%= image_tag movie.movie_image.url %>
               </div>
 
-              <div class="panel">
-                <%= "Movie Title: " %><br/>
-                <%= movie.title  %><br />
-                <%= "Movie genre: " %><br/>
-                <%= movie.genre  %><br />
-                <br />
-                <%= link_to "Buy Ticket", :controller => "bookings", :action => "prebooking", :mov_id => movie.id, :class => 'button' %>
-              </div>
+              	<div class="panel">
+					<h7><%= "Movie Title: " %></h7><br />
+			        <h7 class="subheader"><%= movie.title  %><br /> </h7>
+					<h7><%= "Movie genre: " %></h7><br />
+			        <h7 class="subheader"><%= movie.genre  %><br /> </h7>
+								<br>
+			<%= link_to "Buy Ticket", :controller => "bookings", :action => "prebooking", :mov_id => movie.id, :class => 'button' %>
+				  </div>
             </li><% end %>
           </ul>
         </div>
       </div>
-
     </div>
   </center><script type="text/javascript">
 //<![CDATA[
