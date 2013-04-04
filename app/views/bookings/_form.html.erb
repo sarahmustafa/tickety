@@ -52,9 +52,13 @@
 <br />
         <% end %>
 
-
+<% if @a.any? { |i| i.is_taken? } == false %>
 <input type="Submit" value="Submit" class="button">
+<% else %>
+<%= "Sorry No Seats Available" %>
+<% end %>
 </center>
+
 <% end %>
 
 

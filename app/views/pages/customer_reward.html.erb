@@ -1,0 +1,38 @@
+
+ 
+  <div class="row">
+ 
+
+    <div class="large-12 columns" role="content">
+ 
+ 
+        <h3>Customer Reward System</h3>
+        <h6>Hello <%= @user.name %>!   You have <%= @user.reward_points %>  points</h6>
+
+<h4> Available Rewards </h4>
+
+<table>
+  <tr>
+    <th>Reward title</th>
+    <th>Reward points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rewards.each do |reward| %>
+  <tr>
+    <td><%= reward.reward_title %></td>
+    <td><%= reward.reward_points %></td>
+    <td><%= link_to 'Details', reward %></td>
+    <td><%= link_to "Redeem", {:controller=> :rewards, :action => :redeem, :id => reward.id, :remote => true } %>  </td>  
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+ 
+</div>
+</div>
