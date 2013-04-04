@@ -50,7 +50,7 @@ skip_before_filter :require_login, :only => [:index, :new, :create]
       if @user.save
         #format.svg {render :qrcode => request.url, :level => :l, :unit => 10}
       
-        format.html { redirect_to :users, notice: 'User was successfully created.' }
+        format.html { redirect_to :root, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }

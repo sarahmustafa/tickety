@@ -1,80 +1,132 @@
-<div class="row">
-<div class="small-2 large-4 columns">
-<p id="notice"><%= notice %></p>
 
-<p>
-  <h4><%= @show.cinema.name %></h4>
-</p>
-
-<p>
-	 <b>Theater:</b>
-  <%= @show.theater.theater_number %>
-</p>
-
-<p>
-	 <b>Movie:</b>
-  <%= @show.movie.title %>
-</p>
-
-<p>
-	 <b>Show Time:</b>
-  <%= @show.show_time.strftime('%H:%M %p')  %>
-</p>
-<p>
-  <b>Show Date:</b>
-  <%= @show.show_date %>
-</p>
-
-<p>
-	 <b>Seat Number:</b>
-  <%= @payment.bookings.last.seats.last.number %>
-</p>
+<head><title>Tickety</title></head>
+	
+<body>
+<div class="row">		
+	<div class="goldenticket">
 
 
-<p>
-  <b>Price:</b>
-  <%= @payment.bookings.last.price %>
-</p>
+		<span><sara><%= @show.movie.title %></sara></span>
+<hr>
 
 
-<style type="text/css">
- table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
- }
- td {
-   border-width: 0;
-   border-style: none;
-   border-color: #0000ff;
-   border-collapse: collapse;
-   padding: 0;
-   margin: 0;
-   width: 10px;
-   height: 10px;
- }
- td.black { background-color: #000; }
- td.white { background-color: #fff; }
-</style>
- 
-<table>
- <% @qr.modules.each_index do |x| -%>
-   <tr>
-   <% @qr.modules.each_index do |y| -%>
-    <% if @qr.dark?(x,y) -%>
-    <td class="black"/>
-    <% else -%>
-    <td class="white"/>
-    <% end -%>
-   <% end -%>
-   </tr>
- <% end -%>
-</table>
+		<div class="row">
+		  <div class="large-6 columns">
+
+
+			<ul class="large-block-grid-2">
+			  <li>
+				<div class="theater">
+					 <sara>Theater:</sara><br />
+
+				  <h5><%= @show.theater.theater_number %></h5>
+
+					</div>
+				</li>
+			  <li>
+				<div class="cinema">
+					 <sara>Cinema:</sara><br />
+				  <h5><%= @show.cinema.name %></h5>
+				</div>
+
+				</li>
+			  <li>
+				<div class="showtime">
+					 <sara>Show Time:</sara><br />
+				  <h5><%= @show.show_time.strftime('%H:%M %p')  %></h5>
+				</div>
+				</li>
+			  <li>
+				<div class="showdate">
+				  <sara>Show Date:</sara><br />
+				 <h5> <%= @show.show_date %></h5>
+				</div>
+				</li>
+				<li>
+					<div class="seat">
+						 <sara>Seat Number:</sara><br />
+					<h5>  <%= @payment.bookings.last.seats.last.number %></h5>
+					</div>
+				</li>
+				<li>
+					<div class="price">
+					  <sara>Price:</sara><br />
+					<h5>  <%= @payment.bookings.last.price %></h5>
+					</div>
+				</li>
+
+				
+			</ul>
+			
+				  <h3>NON REFUNDABLE</h3><br />
+			</div>
+			
+			
+
+			
+			  <div class="large-6 columns">
+
+
+
+			<QR>
+			<style type="text/css">
+			 table {
+			  border-width: 0;
+			  border-style: none;
+			  border-color: #0000ff;
+			  border-collapse: collapse;
+			 }
+			 td {
+			   border-width: 0;
+			   border-style: none;
+			   border-color: #0000ff;
+			   border-collapse: collapse;
+			   padding: 0;
+			   margin: 0;
+			   width: 10px;
+			   height: 10px;
+			 }
+			 td.black { background-color: #000; }
+			 td.white { background-color: #fff; }
+			</style>
+
+			<table>
+			 <% @qr.modules.each_index do |x| -%>
+			   <tr>
+			   <% @qr.modules.each_index do |y| -%>
+			    <% if @qr.dark?(x,y) -%>
+			    <td class="black"/>
+			    <% else -%>
+			    <td class="white"/>
+			    <% end -%>
+			   <% end -%>
+			   </tr>
+			 <% end -%>
+			</table>
+			</QR>
+		</div>
+		</div>
+
+
+	
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 <center>
-<%= link_to 'Edit', edit_payment_path(@payment) %> |
-<%= link_to 'Back', payments_path %>
+<input type="button" onClick="window.print()" value="Print" class="button"/>
+<%= link_to 'Finish', root_path, :class => "button" %>
 </center>
+
+
+
+</body>

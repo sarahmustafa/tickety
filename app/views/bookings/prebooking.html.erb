@@ -11,24 +11,37 @@
     </div>
   <% end %>
 
-<div class="panel", width:100px>
-	       <div class="row">
-	                <div class="large-6 columns" style="width:200px">
+<div class="row">
+	<div class="small-11 small-centered columns">
+	<div class="panel">
+		<div class="row">
+		<div class="small-3 columns">
+		<div class="prebooking">
 	      <%= image_tag @movie_details.movie_image.url %>
-	</div>
+    	</div>
+		</div>
 
-
+<div class="small-8 columns">
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
   <div class="field">
 	<h3><%= "Movie Details" %></h3><br />
-	    <h5><%= "Movie Title: " %> <br /></h5><h6 class="subheader"><%= @movie_details.title %><br /> </h6>
-	    <h5><%= "Movie Summary: " %> <br /></h5><h6 class="subheader"><%= @movie_details.summary %><br /></h6>
-	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6>
+	    <h5><%= "Movie Title: " %> <br /></h5><h6 class="subheader"><%= @movie_details.title %><br /> </h6><br />
+	    <h5><%= "Movie Summary: " %> <br /></h5><h6 class="subheader"><%= @movie_details.summary %><br /></h6><br />
+	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6><br /><br /><br />
   </div>
-	</div>
+
 </div>
+</div>
+</div>
+</div>
+</div>
+
 <center>
-<a> Movie is available in: </a> <br />
+	<div class="row">
+	<div class="small-11 small-centered columns">
+	<div class="panel">
+<h3>Available Shows</h3><br />
+
 
 <table>
 <tr>
@@ -51,9 +64,11 @@
 <% end %>
 <br />
 </table>
+<br />
 </center>
-
-
+	</div>
+</div>
+	</div>
 
  
 

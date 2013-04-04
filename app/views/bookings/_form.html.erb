@@ -13,31 +13,41 @@
       </ul>
     </div>
   <% end %>
+<div class="row">
+	<div class="small-11 small-centered columns">
+	<div class="panel">
+		<div class="row">
+		<div class="small-3 columns">
+		<div class="prebooking">
 
-<div class="panel", width:100px>
-	       <div class="row">
-	                <div class="large-6 columns" style="width:200px">
 	      <%= image_tag @show.movie.movie_image.url %>
-	</div>
 
-
+  	</div>
+		</div>
+		
+		<div class="small-8 columns">
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
 <%= f.hidden_field :show_id, :value => @show.id %>
   <div class="field">
 	<h3><%= "Movie Details" %></h3><br />
-	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @show.movie.title %><br /> </h6>
-	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @show.movie.summary %><br /></h6>
-	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @show.movie.genre %></h6>
-  <h4><%= "Location: " %><br /> </h4><h6><%= @show.cinema.name %></h6>
-<h4><%= "Time: " %><br /> </h4><h6><%= @show.show_time.strftime('%H:%M %p') %> on  <%= @show.show_date %> </h6>
+	    <h5><%= "Movie Title: " %> <br /></h5><%= @show.movie.title %><br /> <br />
+	    <h5><%= "Movie Summary: " %> <br /></h5><%= @show.movie.summary %><br /><br />
+	    <h5><%= "Movie genre: " %><br /> </h5><%= @show.movie.genre %><br /><br />
+  <h5><%= "Location: " %><br /> </h5><%= @show.cinema.name %><br /><br />
+<h5><%= "Time: " %><br /> </h5><%= @show.show_time.strftime('%H:%M %p') %> on  <%= @show.show_date %> <br/><br /><br />
 
   </div>
-	</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <center>
 
-
-<h4><%= "select seats" %></h4>
+	<div class="row">
+		<div class="small-11 small-centered columns">
+<div class="panel callout radius">
+<h3><%= "Select Your Seat" %></h3>
 
 
 <% @x = 0 %>
@@ -52,17 +62,14 @@
 <br />
         <% end %>
 
+</div>
+</div>
+</div>
 
-<input type="Submit" value="Submit" class="button">
+<input type="Submit" value="Next" class="button success">
 </center>
 <% end %>
 
-
-
-<h4> Seat Layout:</h4>
-
-
-  
 
 
 
