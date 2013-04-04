@@ -3,7 +3,9 @@ class PagesController < ApplicationController
   def creators
   end
 
-  def CRS
+  def customer_reward
+   @user= current_user
+   @rewards= Reward.find(:all, :conditions => ["reward_points <= ?", @user.reward_points])
   end
 
   def currentlyshowing

@@ -1,9 +1,14 @@
 Tickety::Application.routes.draw do
 
+  resources :rewards do
+get :redeem, :on => :collection
+post :redeem, :on => :collection
+end
+
   match 'home' => "pages#index"
   match 'newreleases' => "pages#newreleases"
   match 'currentlyshowing' => "pages#currentlyshowing"
-  match 'rewardsystem' => "pages#CRS"
+  match 'rewardsystem' => "pages#customer_reward"
   match 'signin' => "pages#signin"
   match 'policies' => "pages#policies"
   match 'creators' => "pages#creators"
