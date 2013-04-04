@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401180333) do
+ActiveRecord::Schema.define(:version => 20130403155758) do
 
   create_table "bookings", :force => true do |t|
     t.date     "booking_date"
@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(:version => 20130401180333) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "rewards", :force => true do |t|
+    t.string   "reward_title"
+    t.integer  "reward_points"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "seats", :force => true do |t|
     t.integer  "number"
     t.string   "type"
@@ -87,7 +94,7 @@ ActiveRecord::Schema.define(:version => 20130401180333) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",         :null => false
+    t.string   "username",                        :null => false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
@@ -95,13 +102,13 @@ ActiveRecord::Schema.define(:version => 20130401180333) do
     t.boolean  "is_customer"
     t.boolean  "is_admin"
     t.boolean  "is_manager"
-    t.integer  "reward_points"
+    t.integer  "reward_points",    :default => 5
     t.string   "billing_address"
     t.integer  "creditcard_num"
     t.string   "creditcard_type"
     t.integer  "security_num"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
 end

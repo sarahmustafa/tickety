@@ -1,0 +1,24 @@
+<h1>Listing rewards</h1>
+
+<table>
+  <tr>
+    <th>Reward title</th>
+    <th>Reward points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rewards.each do |reward| %>
+  <tr>
+    <td><%= reward.reward_title %></td>
+    <td><%= reward.reward_points %></td>
+    <td><%= link_to 'Details', reward %></td>
+    <td><%= link_to 'Redeem', reward, method: :redeem, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reward', new_reward_path %>
