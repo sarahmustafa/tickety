@@ -9,7 +9,7 @@ belongs_to :cinema
 
 attr_reader :movie_title
 #attr_accessor :movie_title
-validates :show_date, :show_time, :theater_id, :movie_title, :presence => true
+validates :show_date, :show_time, :theater_id, :movie_title, :show_type, :cinema_id, :movie_title, :presence => true
 
 #attr_reader :movie_title
 #attr_accessor :movie_id

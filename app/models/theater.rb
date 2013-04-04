@@ -8,10 +8,8 @@ belongs_to :cinema
 attr_accessor           :seat_num
 attr_accessible         :seat_num
 
-validates :seat_num, :theater_number, :presence => true
-validates :seat_num, :theater_number, :presence => { :message => " is required" }
 
-validates :theater_number, :seat_num, :numericality => {:greater_than => 0, :only_integer => true, :allow_blank => false, :allow_nil => false}
+validates :theater_number, :numericality => {:greater_than => 0, :only_integer => true, :allow_blank => false, :allow_nil => false}
 
 validate do |theater|
   if theater.seat_num == "0"

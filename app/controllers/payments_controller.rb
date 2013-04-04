@@ -54,7 +54,7 @@ class PaymentsController < ApplicationController
     @payment = Payment.new(params[:payment])
     @user = User.find(current_user)
     @numtickets = @user.bookings.last.seats.count
-    @user.reward_points = 5 * @numtickets
+    @user.reward_points = @user.reward_points + 5 * @numtickets
     @updatebooking = @user.bookings.last
     
     respond_to do |format|
