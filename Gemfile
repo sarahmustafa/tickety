@@ -6,6 +6,8 @@ gem "bcrypt-ruby"
 gem 'rails3-jquery-autocomplete'
 gem "cancan"
 gem "paperclip"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 gem 'rqrcode'
 gem 'mini_magick'

@@ -24,7 +24,8 @@ class PaymentsController < ApplicationController
     @show = @payment.bookings.last.show
     
     respond_to do |format|
-      format.html # show.html.erb
+      #show.html.erb
+      render :pdf => "ticket"
      # format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }
       format.json { render json: @payment }
     end
