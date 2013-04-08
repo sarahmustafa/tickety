@@ -12,6 +12,9 @@
     </div>
   <% end %>
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
+<%= f.hidden_field :date, :value => DateTime.now %>
+
+
 
 <div class="row">
 	<div class="small-11 small-centered columns">
@@ -46,12 +49,30 @@
 	            <fieldset> 
 
 				<div class="large-12 columns">
-								      <shamma>Amount</shamma>
-				        <%= f.number_field :amount %>
+					<shamma>Total Price</shamma>
+				 <%= f.text_field :amount, :value => @booking.price, :readonly => true %>
 				      </div>
-			      <shamma>Date</shamma>
-			    <%= f.datetime_select :date %>
+				
+					<div class="large-12 columns">
+						<shamma>Billing Address</shamma>
+				<%= f.text_field :billing_address %>
+	</div>
+	
+					<div class="large-12 columns">
+						<shamma>Credit Card Number</shamma>
+				<%= f.text_field :creditcard_num %>
+	</div>
+	
+					<div class="large-12 columns">
+						<shamma>Credit Card Type</shamma>
+				<%= f.text_field :creditcard_type %>
+	</div>
 
+					<div class="large-12 columns">
+						<shamma>Three Digit Code</shamma>
+				<%= f.text_field :CVV %>
+	</div>
+	
 	            </fieldset>  
 
 	</div>  

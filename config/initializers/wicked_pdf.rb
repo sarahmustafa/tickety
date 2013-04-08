@@ -1,4 +1,3 @@
-WickedPdf.config = {
-    :wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
-    :exe_path => '/usr/local/bin/wkhtmltopdf'
+WICKED_PDF = {
+  :exe_path => '/usr/local/bin/wkhtmltopdf-amd64'
 }

@@ -24,4 +24,7 @@ class PagesController < ApplicationController
 
   def webinfo
   end
+  
+  def admindashboard
+  end
 end

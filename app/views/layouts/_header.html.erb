@@ -27,12 +27,20 @@
       <li class="divider"></li>
 		<li><%=link_to "Customer Reward Program", rewardsystem_path %></li>
       <li class="divider"></li>
+
+	
+    <li class="divider"></li>
+	
+
     </ul>
 
  	 <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li class="divider hide-for-small"></li>
 			 <% if current_user %>
+				<% if current_user.is_admin == true %>
+				<li><%=link_to "Admin Dashboard", admindashboard_path %></li>
+				<% end %>
 					      <li class="has-dropdown"><a href="#">Account</a>
 
 					        <ul class="dropdown">

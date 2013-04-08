@@ -1,4 +1,5 @@
-
+# in application.rb(Rails3) or environment.rb(Rails2)
+require 'pdfkit'
 
 require File.expand_path('../boot', __FILE__)
 
@@ -34,7 +35,8 @@ module Tickety
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
+    config.middleware.use "PDFKit::Middleware"
+    config.force_ssl = false
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

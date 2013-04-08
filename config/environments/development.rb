@@ -6,6 +6,8 @@ Paperclip.options.merge!(:command_path => "/usr/local/bin")
 
 Paperclip.options.merge!(:command_path => "/usr/bin")
 
+#config.threadsafe! 
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

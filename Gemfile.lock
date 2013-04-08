@@ -31,8 +31,6 @@ GEM
     addressable (2.3.3)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bourne (1.4.0)
-      mocha (~> 0.13.2)
     builder (3.0.4)
     cancan (1.6.9)
     capybara (2.0.3)
@@ -47,7 +45,7 @@ GEM
     chronic (0.9.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.0)
+    cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -68,10 +66,10 @@ GEM
       rails (~> 3.0)
     daemons (1.1.9)
     database_cleaner (0.9.1)
-    diff-lcs (1.2.1)
+    diff-lcs (1.2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.16.10)
+    excon (0.20.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -82,16 +80,16 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     ffi (1.6.0)
-    gherkin (2.11.6)
-      json (>= 1.7.6)
-    heroku (2.35.0)
+    gherkin (2.11.7)
+      multi_json (~> 1.3)
+    heroku (2.37.2)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
       netrc (~> 0.7.7)
       rest-client (~> 1.6.1)
       rubyzip
-    heroku-api (0.3.8)
-      excon (~> 0.16.10)
+    heroku-api (0.3.9)
+      excon (~> 0.20.1)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.4)
@@ -109,12 +107,9 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    metaclass (0.0.1)
-    mime-types (1.21)
+    mime-types (1.22)
     mini_magick (3.5.0)
       subexec (~> 0.2.1)
-    mocha (0.13.3)
-      metaclass (~> 0.0.1)
     multi_json (1.7.2)
     multipart-post (1.2.0)
     netrc (0.7.7)
@@ -132,6 +127,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
       mime-types
+    pdfkit (0.5.3)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -167,7 +163,7 @@ GEM
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.13.0)
+    rspec-mocks (2.13.1)
     rspec-rails (2.13.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -186,9 +182,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
-    shoulda-matchers (1.5.4)
+    shoulda-matchers (2.0.0)
       activesupport (>= 3.0.0)
-      bourne (~> 1.3)
     sorcery (0.8.1)
       bcrypt-ruby (~> 3.0.0)
       oauth (~> 0.4.4)
@@ -206,13 +201,13 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    thor (0.18.0)
+    thor (0.18.1)
     tilt (1.3.6)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
-    uglifier (1.3.0)
+    uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     websocket (1.0.7)
@@ -221,7 +216,7 @@ GEM
       chronic (>= 0.6.3)
     wicked_pdf (0.9.4)
       rails
-    wkhtmltopdf-binary (0.9.9.1)
+    wkhtmltopdf (0.1.2)
     xpath (1.0.0)
       nokogiri (~> 1.3)
     zurb-foundation (4.0.9)
@@ -244,6 +239,7 @@ DEPENDENCIES
   launchy
   mini_magick
   paperclip
+  pdfkit
   rails (= 3.2.8)
   rails3-jquery-autocomplete
   rqrcode
@@ -257,5 +253,5 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   whenever
   wicked_pdf
-  wkhtmltopdf-binary
+  wkhtmltopdf
   zurb-foundation (~> 4.0.0)

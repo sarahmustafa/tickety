@@ -13,6 +13,7 @@ end
   match 'policies' => "pages#policies"
   match 'creators' => "pages#creators"
   match 'webinfo' => "pages#webinfo"
+  match 'admindashboard' => "pages#admindashboard"
   
   root :to => "pages#index"
 

@@ -14,20 +14,29 @@ class PaymentsController < ApplicationController
       format.json { render json: @payments }
     end
   end
-
+  # shamma is the queen
   # GET /payments/1
   # GET /payments/1.json
   def show
     @payment = Payment.find(params[:id])
-    @code = @payment.id.to_s
-    @qr = RQRCode::QRCode.new(@code, :size => 1.3, :level => :h)
+
     @show = @payment.bookings.last.show
+    @tickets = @payment.bookings.last.seats.count
     
+    @thebooking = @payment.bookings.last
     respond_to do |format|
+        
       #show.html.erb
-      render :pdf => "ticket"
-     # format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }
-      format.json { render json: @payment }
+      format.html
+      
+      format.pdf do
+      render :pdf => "ticket",
+      :template => 'payments/show.html.erb',
+      :show_as_html => params[:debug].present?
+    end
+
+    #format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }    
+       format.json { render json: @payment }
     end
   end
 
