@@ -2,6 +2,7 @@
 <head><title>Tickety</title></head>
 	
 <body>
+<% if current_user.id == @payment.customer_id %>
 <% @thebooking.seats.each do |s| %>
 	<% @co = (@payment.id + s.id) * 376213  %>
 	<% @code = @co.to_s %>
@@ -117,20 +118,15 @@
 </div>
 
 
-
-
-
-
-
-
-
-
 <%end%>
 <center>
 <input type="button" onClick="window.print()" value="Print" class="button"/>
 <%= link_to 'Finish', root_path, :class => "button" %>
 </center>
 
-
-
+<% else %>
+<h4> YOU ARE NOT AUTHORIZED TO VIEW THIS TICKET</h4>
+<% end %>
 </body>
+
+

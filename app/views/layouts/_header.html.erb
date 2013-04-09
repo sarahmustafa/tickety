@@ -12,7 +12,7 @@
     <ul class="left">
 
       <li class="divider"></li>
-      <li class="has-dropdown"><a href="#">Home</a>
+      <li class="has-dropdown"><a href="/">Home</a>
 
         <ul class="dropdown">
 			<li><%= link_to "Website Policies", policies_path %></li>
@@ -41,7 +41,7 @@
 				<% if current_user.is_admin == true %>
 				<li><%=link_to "Admin Dashboard", admindashboard_path %></li>
 				<% end %>
-					      <li class="has-dropdown"><a href="#">Account</a>
+					      <li class="has-dropdown"><a href="#"> <%= @current_user.name %>'s Account</a>
 
 					        <ul class="dropdown">
 			                <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>

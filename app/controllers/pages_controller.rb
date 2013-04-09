@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   end
 
   def newreleases
-    @newrelease = Movie.order("created_at desc").limit(8).where("created_at < ?", 1.days.ago)
+    @newrelease = Movie.order("created_at desc").limit(8).where("created_at < ?", 1.second.ago)
   end
 
   def policies

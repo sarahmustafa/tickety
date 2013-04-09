@@ -8,7 +8,7 @@ gem "cancan"
 gem "paperclip"
 gem "pdfkit"
 gem 'wicked_pdf'
-gem 'wkhtmltopdf'
+
 
 gem 'rqrcode'
 gem 'mini_magick'

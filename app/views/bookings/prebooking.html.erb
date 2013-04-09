@@ -27,7 +27,10 @@
 	<h3><%= "Movie Details" %></h3><br />
 	    <h5><%= "Movie Title: " %> <br /></h5><h6 class="subheader"><%= @movie_details.title %><br /> </h6><br />
 	    <h5><%= "Movie Summary: " %> <br /></h5><h6 class="subheader"><%= @movie_details.summary %><br /></h6><br />
-	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6><br /><br /><br />
+	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6><br />
+	
+	<td>   <%= link_to 'Trailer', @movie_details.link %> </td> 
+	<br /><br />
   </div>
 
 </div>

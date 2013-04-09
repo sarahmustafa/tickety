@@ -37,6 +37,7 @@ Paperclip.options.merge!(:command_path => "/usr/bin")
     :password => 'juniorproject'
   }
   
+  config.action_mailer.default_url_options = {host: "localhost:3002"}
   
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
