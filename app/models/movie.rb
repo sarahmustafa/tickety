@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  attr_accessible :actors, :duration, :genre, :summary, :title
+  attr_accessible :actors, :duration, :genre, :summary, :title, :link
   has_many :shows
   attr_accessible :movie_image
   has_attached_file :movie_image , :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"

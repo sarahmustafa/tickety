@@ -2,3 +2,4 @@
 
 This is your movie ticket.
 
+<%= payment_url(Payment.where(:customer_id => @user.id ).last) %>
