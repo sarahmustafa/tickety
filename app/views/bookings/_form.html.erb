@@ -1,5 +1,6 @@
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script src="http://jordankasper.com/jquery/imagecheck/jquery.simpleImageCheck-0.4.js"></script>
 
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
@@ -44,23 +45,35 @@
 </div>
 <center>
 
+
+
 	<div class="row">
 		<div class="small-11 small-centered columns">
 <div class="panel callout radius">
+
+
 <h3><%= "Select Your Seat" %></h3>
 
-
+ <br />
+<label class ="multiCheck">
 <% @x = 0 %>
-  <% (0..10).step(5) do |i| %>
+  <% (0..100).step(10) do |i| %>
+
 	<% @x = i %>
-		 <% for j in 0..4  %>
+		 <% for j in 0..9  %>
 <% if @a[@x] %>
-		 	<%= check_box_tag "booking[seat_ids][]",@a[@x].id , false, :disabled => @a[@x].is_taken? %><%= @a[@x].number %>
+
+		 	<%= check_box_tag "booking[seat_ids][]", @a[@x].id, false, :disabled => @a[@x].is_taken?, :id => @a[@x].number %>
+
+
+<%= @a[@x].number %>
 		<% @x+=1 %>
 <% end %>
 		<% end %>
 <br />
+
         <% end %>
+</label>
 
 
 <% if (@a.all? &:is_taken?) == false %>
@@ -80,6 +93,26 @@
 <% end %>
 
 
+<script type="text/javascript">
+$(document).ready(function() {
+
+$("input:disabled")
+    .simpleImageCheck({
+      image: '/assets/booked_seat_img.gif',
+      imageChecked: '/assets/booked_seat_img.gif'
+    })
+  
+   
+  $("input:checkbox").not(":disabled").simpleImageCheck({
+    image: '/assets/available_seat_img.gif',
+    imageChecked: '/assets/selected_seat_img.gif'
+  });
+  
+  
+  
+});
+
+</script>
 
 
 
