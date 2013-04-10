@@ -41,6 +41,7 @@
 				<% if current_user.is_admin == true %>
 				<li><%=link_to "Admin Dashboard", admindashboard_path %></li>
 				<% end %>
+				<li class="divider"></li>
 					      <li class="has-dropdown"><a href="#"> <%= @current_user.name %>'s Account</a>
 
 					        <ul class="dropdown">
