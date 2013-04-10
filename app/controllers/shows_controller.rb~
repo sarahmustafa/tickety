@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+load_and_authorize_resource
  #autocomplete :movie, :title
 
   # GET /shows
@@ -30,9 +31,9 @@ class ShowsController < ApplicationController
     @movies = Movie.find(:all, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
     respond_to do |format|
       format.html # new.html.erb
-      #format.json { render json: @show }
-      #format.js # index.js.erb 
-      format.js { @movies = Movie.find(:all, :movies => ['title like ?', "%#{params[:search]}%"]) }
+      format.json { render json: @show }
+      format.js # index.js.erb 
+      #format.js { @movies = Movie.find(:all, :movies => ['title like ?', "%#{params[:search]}%"]) }
     end
   end
 
@@ -48,6 +49,11 @@ class ShowsController < ApplicationController
 
     respond_to do |format|
       if @show.save
+        for i in 1..10
+         	@seats= Seat.new(:show_id => @show.id, :theater_id => @show.theater.id, :number => i)
+      	@seats.save
+      	end
+      	
         format.html { redirect_to @show, notice: 'Show was successfully created.' }
         format.json { render json: @show, status: :created, location: @show }
       else
