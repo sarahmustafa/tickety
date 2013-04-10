@@ -102,22 +102,23 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(params[:booking])
     @show = @booking.show
-    
+    #@booking.num_seat = @booking.seats.count
+   
 	case
 	 when @show.show_type == "Regular"
- 	  @booking.price = 35
+ 	  @booking.price = 35  
 	 when @show.show_type == "IMAX 3D"
- 	  @booking.price =  45
+ 	  @booking.price =  45  
 	 when @show.show_type == "RealD 3D" 
  	  @booking.price =  45
          when @show.show_type == "Dolby Digital 3D"
- 	  @booking.price =  45
+ 	  @booking.price =  45 
 	end
 
     @booking.user_id = current_user.id
     respond_to do |format|
       if @booking.save
-
+        
         @selectingseats = @booking.seats
 	@selectingseats.each { |n| n.update_attribute(:is_taken, true) }
 

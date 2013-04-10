@@ -49,7 +49,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @show.save
-        for i in 1..10
+        for i in 1..100
          	@seats= Seat.new(:show_id => @show.id, :theater_id => @show.theater.id, :number => i)
       	@seats.save
       	end
