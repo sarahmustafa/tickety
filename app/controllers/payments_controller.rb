@@ -43,8 +43,9 @@ class PaymentsController < ApplicationController
   # GET /payments/new
   # GET /payments/new.json
   def new
+@user = User.find(current_user)
     @booking = Booking.find(params[:booking_id])
-    
+    @numtickets = @user.bookings.last.seats.count
     @payment = Payment.new
 
     respond_to do |format|
@@ -66,7 +67,8 @@ class PaymentsController < ApplicationController
     @numtickets = @user.bookings.last.seats.count
     @user.reward_points = @user.reward_points + 5 * @numtickets
     @updatebooking = @user.bookings.last
-    
+    @newprice = @user.bookings.last.price * @numtickets
+     
     respond_to do |format|
       if @payment.save
         @updatebooking.payment_id = @payment.id
