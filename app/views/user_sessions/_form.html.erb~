@@ -1,0 +1,20 @@
+<%= form_tag user_sessions_path, :method => :post do %>
+<div class="row">
+  <div class="large-12 columns">
+  <div class="field">
+    <%= label_tag :username %><br />
+    <%= text_field_tag :username %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+<h4>Forgot Password?</h4>
+<%= render 'forgot_password_form' %>
+<br/>
+<br/>
+<center>
+<input type="Submit" value="Submit" class="button"> 
+</center>
+<% end %>
+  </div>  </div>

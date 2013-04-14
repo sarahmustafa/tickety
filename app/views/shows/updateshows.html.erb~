@@ -1,0 +1,41 @@
+<head>
+ 
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="stylesheets/foundation.min.css">
+
+
+</head>
+
+<%= form_for(@updateshow) do |f| %>
+  <% if @show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@show.errors.count, "error") %> prohibited this show from being saved:</h2>
+
+      <ul>
+      <% @show.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="large-12 columns">
+    <%= f.label :show_time %><br />
+    <%= f.time_select :show_time %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :show_date %><br />
+    <%= f.date_select :show_date %>
+  </div>
+</div>
+
+
+
+	<center>
+	<input type="Submit" value="Submit" class="button"> 
+	</center>
+	<% end %>

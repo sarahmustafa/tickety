@@ -27,7 +27,7 @@ def movie_title=(title)
 end
 
 def self.clear_show
-  puts dgsdg
+
   t = Time.now
   t2 = t + 15*60
   if t2 > self.show_time

@@ -2,5 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-  $('#test').autocomplete
-   source: $('#test').data('autocomplete-source')
+jQuery ->
+
+  $('#page_movie_title').autocomplete
+   source: $('#page_movie_title').data('autocomplete-source')

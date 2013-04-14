@@ -1,5 +1,13 @@
 Tickety::Application.routes.draw do
 
+  get "password_resets/create"
+
+  get "password_resets/edit"
+
+  get "password_resets/update"
+
+resources :password_resets
+
   resources :rewards do
 get :redeem, :on => :collection
 post :redeem, :on => :collection
@@ -28,6 +36,8 @@ get :prebooking , :on => :collection
 
 
   resources :movies
+  
+  resources :searches
 
   resources :payments
 
@@ -37,7 +47,9 @@ get :prebooking , :on => :collection
 
   resources :cinemas
 
-  resources :shows
+  resources :shows do
+get :updateshows, :on => :collection
+end
 
   resources :bookings
 

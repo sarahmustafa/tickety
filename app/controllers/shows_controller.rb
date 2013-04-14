@@ -92,5 +92,23 @@ load_and_authorize_resource
   end
 
 
+  def updateshows
+ 
+   @shows = Show.all
+   @now = Time.now
+   @future = @now + 15*60
+   @shows.each do |show|
+   if @future > (show.show_time && show.show_date)
+    show.destroy
+   end
+  end
+
+   respond_to do |format|
+      format.html { redirect_to shows_url }
+      format.json { head :no_content }
+    end
+
+  end
+
 
 end

@@ -13,7 +13,18 @@ class PagesController < ApplicationController
   end
 
   def index
+ @movies = Search.new
+ @movies.save
   end
+
+def create
+@movies = Search.new(params[:search])
+respond_to do |format|
+   if @movies.save
+format.html { redirect_to :controller => "bookings", :action => "prebooking", :mov__id => @movies.movie_title}
+     end
+end
+end
 
   def newreleases
     @newrelease = Movie.order("created_at desc").limit(8).where("created_at < ?", 1.second.ago)

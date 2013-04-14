@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require foundation
+//= require dataTables/jquery.dataTables
 //= require_tree .
 
 $(document).foundation();

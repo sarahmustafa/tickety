@@ -1,3 +1,15 @@
+<head>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+ 
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+</head>
+
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -42,18 +54,21 @@
 <center>
 	<div class="row">
 	<div class="small-11 small-centered columns">
-	<div class="panel">
+
 <h3>Available Shows</h3><br />
 
 
-<table>
+<table id="shows" class="display">
+<thead>
 <tr>
 <th>Cinema</th>
 <th>Time</td>
 <th>Date</td>
 <th> </th>
 </tr>
+</thead>
 
+<tbody>
 <tr>
 <% @shows.each do |show| %>
 
@@ -65,13 +80,16 @@
 
 </tr>
 <% end %>
+
+</tbody>
+
 <br />
-</table>
 <br />
 </center>
-	</div>
+
+
 </div>
-	</div>
+</table>	</div>
 
  
 
