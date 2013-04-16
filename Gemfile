@@ -22,7 +22,7 @@ gem 'sqlite3'
 #gem 'mysql2'
 
 group :production do
-  #gem 'pg'
+  gem 'pg'
   gem 'thin'
 end
 # Gems used only for assets and not required
