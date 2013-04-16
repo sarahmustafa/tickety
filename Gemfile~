@@ -44,6 +44,7 @@ gem 'sorcery'
 
 group :development, :test do
   gem "rspec-rails", ">= 2.8.1"
+  gem "pg"
 end
 
 group :test do

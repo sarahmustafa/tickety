@@ -18,7 +18,7 @@ gem 'whenever', :require => false
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
+gem 'sqlite3'
 #gem 'mysql2'
 
 group :production do
@@ -44,7 +44,6 @@ gem 'sorcery'
 
 group :development, :test do
   gem "rspec-rails", ">= 2.8.1"
-  gem "pg"
 end
 
 group :test do
