@@ -2,6 +2,17 @@
 <head><title>Tickety</title></head>
 	
 <body>
+</br></br></br></br></br></br></br></br>
+<div class="row">
+	<div class="large-9 small-centered columns">
+<center>
+<h1 class="title-prebooking">Your Movie Ticket</h1>
+<hr>
+
+</div></div>
+</center>
+
+
 <% if current_user.id == @payment.customer_id %>
 <% @thebooking.seats.each do |s| %>
 	<% @co = (@payment.id + s.id) * 376213  %>
@@ -64,8 +75,8 @@
 			
 				  <h3>NON REFUNDABLE</h3><br />
 			</div>
-			
-			
+
+
 
 			
 			  <div class="large-6 columns">
@@ -117,6 +128,17 @@
 
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+	<div class="panel">
+<h3>Instructions:</h3>
+<li><h5> Print; make sure the QR code is visible. A digital version of the ticket is sent to your e-mail.  </h5></li>
+<li><h5> Take the printed ticket to the movie theater or open the digital version on your mobile phone.  </h5></li>
+<li><h5> Enjoy your movie!  </h5></li>
+	<br/>
+	</div>			
+</div>
+</div>
 
 <%end%>
 <center>
@@ -127,6 +149,7 @@
 <% else %>
 <h4> YOU ARE NOT AUTHORIZED TO VIEW THIS TICKET</h4>
 <% end %>
+</br></br></br></br></br></br></br></br>
 </body>
 
 

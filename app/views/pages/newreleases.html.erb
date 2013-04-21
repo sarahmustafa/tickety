@@ -1,62 +1,33 @@
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-
-<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!--<![endif]-->
-
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
-  <meta charset="utf-8" /><!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Tickety</title>
-  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-  <link rel="stylesheet" href="css/foundation.css" type="text/css" />
-  <script src="js/vendor/custom.modernizr.js" type="text/javascript">
-</script>
-</head>
-
+</br></br></br></br></br></br></br></br>
 <body>
-  <center>
+	<center>
+
+<div class="row">
+  <div class="large-12 columns">
+		<h1 class="title-prebooking"> New Releases </h1>
+		<hr>
     <div class="row">
-      <div class="large-12 columns">
-        <h3>New Releases</h3>
-        <hr />
-
-        <div class="row">
-          <ul class="large-block-grid-4">
-            <% @newrelease.each do |movie| %>
-
-            <li>
-              <div class="poster">
-                <%= image_tag movie.movie_image.url %>
-              </div>
-
-              	<div class="panel">
+		<ul class="large-block-grid-4">
+			
+<% @newrelease.each do |movie| %>
+		     	<li>
+				 <div class="poster">
+				<%= image_tag movie.movie_image.url %>
+				</div>
+			      <div class="infobox"><br />
 					<h7><%= "Movie Title: " %></h7><br />
 			        <h7 class="subheader"><%= movie.title  %><br /> </h7>
 					<h7><%= "Movie genre: " %></h7><br />
 			        <h7 class="subheader"><%= movie.genre  %><br /> </h7>
-								<br>
-			<%= link_to "Buy Ticket", :controller => "bookings", :action => "prebooking", :mov_id => movie.id, :class => 'button' %>
 				  </div>
-            </li><% end %>
-          </ul>
-        </div>
-      </div>
+<%= link_to "Buy Ticket", {:controller => "bookings", :action => "prebooking", :mov_id => movie.id}, :class => 'first button' %><br/>
+				</li>
+<% end %>
+
+	</ul>
     </div>
-  </center><script type="text/javascript">
-//<![CDATA[
-  document.write('<script src=js/vendor/' +
-  ('__proto__' in {} ? 'zepto' : 'jquery') +
-  '.js><\/script>')
-  //]]>
-  </script><script src="js/foundation.min.js" type="text/javascript">
-</script><script type="text/javascript">
-//<![CDATA[
-    $(document).foundation();
-  //]]>
-  </script><!-- End Footer -->
+  </div>
+</div>
+
+</center>
 </body>
-</html>

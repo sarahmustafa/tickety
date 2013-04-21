@@ -1,35 +1,33 @@
+</br></br></br></br></br></br></br></br>
 <body>
 	<center>
 
 <div class="row">
   <div class="large-12 columns">
-		<h3> Currently Showing </h3>
+		<h1 class="title-prebooking"> Currently Showing </h1>
 		<hr>
     <div class="row">
 		<ul class="large-block-grid-4">
 			
 <% @allmovies.each do |movie| %>
-
-			<li>
+		     	<li>
 				 <div class="poster">
 				<%= image_tag movie.movie_image.url %>
 				</div>
-			      <div class="panel">
+			      <div class="infobox"><br />
 					<h7><%= "Movie Title: " %></h7><br />
 			        <h7 class="subheader"><%= movie.title  %><br /> </h7>
 					<h7><%= "Movie genre: " %></h7><br />
 			        <h7 class="subheader"><%= movie.genre  %><br /> </h7>
-								<br>
-			<%= link_to "Buy Ticket", :controller => "bookings", :action => "prebooking", :mov_id => movie.id, :class => 'button' %>
 				  </div>
-	</li>
-
+<%= link_to "Buy Ticket", {:controller => "bookings", :action => "prebooking", :mov_id => movie.id}, :class => 'first button' %><br/>
+				</li>
 <% end %>
 
 	</ul>
     </div>
   </div>
 </div>
-
+</br></br></br></br></br></br></br></br>
 </center>
 </body>

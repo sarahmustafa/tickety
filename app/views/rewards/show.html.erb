@@ -1,15 +1,62 @@
+<head>
+	<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+	</head>
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Reward title:</b>
-  <%= @reward.reward_title %>
-</p>
-
-<p>
-  <b>Reward points:</b>
-  <%= @reward.reward_points %>
-</p>
+<center>
+	</br></br></br></br></br></br></br></br>
+<div class="row">
+   <div class="large-9 small-centered columns">
 
 
-<%= link_to 'Edit', edit_reward_path(@reward) %> |
-<%= link_to 'Back', rewards_path %>
+     <!-- Header Content -->
+
+
+           <h3 class="show-for-small">Header<hr/></h3>
+
+           <div class="panel">
+             <h4 class="hide-for-small">What does this mean?<hr/></h4>
+           <h5 class="subheader">With every point to gain from using this system, you can collect enough and get free popcorn, free drinks, and even free tickets! All you have to do is take your coupon to the cinema and enjoy your sweet reward!</h5></br>
+           </div>
+
+<div class="panel">
+
+		<div class="row" style="padding-top: 10px;">
+	      <div class="large-4 columns">
+	    		<img class="morph" style="margin-bottom: 10px;" src="/assets/popcorn.png">
+	      </div>
+	      <div class="large-4 columns">
+	    		<img class="morph" style="margin-bottom: 10px;" src="/assets/drink.png">
+	      </div>
+	      <div class="large-4 columns">
+	    		<img class="morph" style="margin-bottom: 10px;" src="/assets/freeticket.png">
+	    	</div>
+	    </div> </br>
+
+</div>
+
+         <div class="row">
+             <div class="large-6 small-6 columns">
+               <div class="panel">
+                 <h5>Reward Type</h5>
+               <h6 class="subheader"><%= @reward.reward_title %></h6></br>
+               </div>
+             </div>
+
+             <div class="large-6 small-6 columns">
+               <div class="panel">
+                 <h5>Reward Points</h5>
+               <h6 class="subheader"><%= @reward.reward_points %></h6></br>
+               </div>
+             </div>
+
+
+<%= link_to 'Back', rewardsystem_path, :class=>" button" %>
+
+
+   </div>
+ </div>
+</center>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>

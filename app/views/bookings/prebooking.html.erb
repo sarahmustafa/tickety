@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
 <!-- DataTables CSS -->
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
@@ -10,6 +11,10 @@
 
 </head>
 
+=======
+
+</br></br></br></br></br></br></br></br>
+>>>>>>> shammaalhetmi-master
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -23,40 +28,50 @@
     </div>
   <% end %>
 
-<div class="row">
-	<div class="small-11 small-centered columns">
 	<div class="panel">
+<h1 class="title-prebooking">Movie Details</h1><hr>
+
+	<div class="small-11 small-centered columns">
+
 		<div class="row">
 		<div class="small-3 columns">
 		<div class="prebooking">
 	      <%= image_tag @movie_details.movie_image.url %>
-    	</div>
+	<%= link_to 'Watch Trailer', @movie_details.link, :class => "button" %>
+  	</div>
 		</div>
 
 <div class="small-8 columns">
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
-  <div class="field">
-	<h3><%= "Movie Details" %></h3><br />
-	    <h5><%= "Movie Title: " %> <br /></h5><h6 class="subheader"><%= @movie_details.title %><br /> </h6><br />
-	    <h5><%= "Movie Summary: " %> <br /></h5><h6 class="subheader"><%= @movie_details.summary %><br /></h6><br />
-	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6><br />
-	
-	<td>   <%= link_to 'Trailer', @movie_details.link %> </td> 
-	<br /><br />
-  </div>
+<div class="field">
+<h3><%= "Movie Title: " %></h3>
+<p class="prebooking-intro"><%= @movie_details.title %></p>
+<h3>Movie Summary:</h3>
+<p class="prebooking-intro"><%= @movie_details.summary %></p>
+<h3>Movie genre:</h3>
+<p class="prebooking-intro"><%= @movie_details.genre %></p>
+<br /><br />
+</div>
 
 </div>
 </div>
 </div>
 </div>
-</div>
+
 
 <center>
+<<<<<<< HEAD
 	<div class="row">
 	<div class="small-11 small-centered columns">
 
 <h3>Available Shows</h3><br />
+=======
+	<div class="panel">
+	<div class="small-11 small-centered columns">
+>>>>>>> shammaalhetmi-master
 
+<h1 class="title-prebooking">Available Shows</h1><hr>
+<p class="prebooking-intro">Please select the show you would like to attend by clicking on 'Book'</p>
 
 <table id="shows" class="display">
 <thead>
@@ -73,9 +88,9 @@
 <% @shows.each do |show| %>
 
 <td> <%= link_to show.cinema.name, :controller => "cinemas", :action => "show", :id => show.cinema.id %> </td> 
-<td> <%= link_to show.show_time, :controller => "shows", :action => "show", :id => show.id %> </td> 
+<td> <%= link_to show.show_time.strftime("%H:%M:%S"), :controller => "shows", :action => "show", :id => show.id %> </td> 
 <td> <%= link_to show.show_date, :controller => "shows", :action => "show", :id => show.id %> </td> 
-<td> <%= link_to "Book", :controller => "bookings", :action => "new", :show_id => show.id %> </td>
+<td> <%= link_to "Book", {:controller => "bookings", :action => "new", :show_id => show.id}, :class => 'button second' %> </td>
 
 
 </tr>
@@ -87,11 +102,20 @@
 <br />
 </center>
 
+<<<<<<< HEAD
 
 </div>
 </table>	</div>
+=======
+</div>
+	
+
+
+	</div>
+>>>>>>> shammaalhetmi-master
 
  
 
 
 <% end %>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>

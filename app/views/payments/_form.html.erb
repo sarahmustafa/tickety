@@ -11,79 +11,72 @@
       </ul>
     </div>
   <% end %>
+
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
 <%= f.hidden_field :date, :value => DateTime.now %>
 
 
 
-<div class="row">
-	<div class="small-11 small-centered columns">
-	<div class="panel">
-<div class="field">
-	<h3><%= "Movie Details" %></h3><br />
-	    <h7><%= "Movie Title: " %> <br /></h7>
-	<h7 class="subheader"><%= @booking.show.movie.title %><br /> </h7>
-	    <h7><%= "Movie Summary: " %> <br /></h7>
-	<h7 class="subheader"><%= @booking.show.movie.summary %><br /></h7>
-	    <h7><%= "Movie genre: " %><br /> </h7>
-	<h7 class="subheader"><%= @booking.show.movie.genre %></h7><br />
-  <h7><%= "Location: " %><br /> </h7>
-<h7 class="subheader"><%= @booking.show.cinema.name %></h7><br />
-<h7><%= "Time: " %><br /> </h7>
-<h7 class="subheader"><%= @booking.show.show_time.strftime('%H:%M %p') %> on  <%= @booking.show.show_date %> <br /></h7><br />
 
-  </div>
-
-  </div>
-</div>
-</div>
-</div>
 
 	<div class="row">
-		<div class="small-11 small-centered columns">
-<div class="panel callout radius">
+		<div class="small-6 small-centered columns">
+
+				<div class="row collapse">
+					<div class="two columns">
+			          <center><h4>Total Price in Qatari Riyals</h4></center>
+			        </div>
+			          <%= f.text_field :amount, :value => @booking.price * @numtickets, :readonly => true, :class => 'amount' %>
+			 </div>
+		        </div>
+		 </div>			
+			
+
+			      
+
+			<div class="row">
+				<div class="small-11 small-centered columns">			
+			
+<div class="panel ">
 	
 	<div class="row">  
 	<div class="six columns">  
 
 	            <fieldset> 
-
-				<div class="large-12 columns">
-					<shamma>Total Price</shamma>
-				 <%= f.text_field :amount, :value => @booking.price * @numtickets, :readonly => true %>
-				      </div>
-				
+		<legend>Payment Information</legend>
 					<div class="large-12 columns">
-						<shamma>Billing Address</shamma>
+						<p class="prebooking-intro">Billing Address</p>
 				<%= f.text_field :billing_address %>
 	</div>
-	
-					<div class="large-12 columns">
-						<shamma>Credit Card Number</shamma>
+	<div class="row">
+					<div class="large-4 columns">
+						<p class="prebooking-intro">Credit Card Number</p>
 				<%= f.text_field :creditcard_num %>
 	</div>
 	
-					<div class="large-12 columns">
-						<shamma>Credit Card Type</shamma>
+					<div class="large-4 columns">
+						<p class="prebooking-intro">Credit Card Type</p>
 				<%= f.text_field :creditcard_type %>
 	</div>
 
-					<div class="large-12 columns">
-						<shamma>Three Digit Code</shamma>
+					<div class="large-4 columns">
+						<p class="prebooking-intro">Three Digit Code</p>
 				<%= f.text_field :CVV %>
 	</div>
-	
-	            </fieldset>  
+<br/>	</div>
+<br/>	            </fieldset>  
 
-	</div>  
-	</div>
+<br/>	</div>  
+<br/>	</div>
+
+<br/> </div>
 </div>
- 
 
-<br/>
 <br/>
 <center>
 <input type="Submit" value="Submit" class="button"> 
 </center>
 <% end %>
-
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
