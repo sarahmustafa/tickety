@@ -206,7 +206,7 @@ ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
 
 
 Connecting to database specified by database.yml
-<<<<<<< HEAD
+
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 
@@ -218,7 +218,6 @@ Completed 500 Internal Server Error in 331ms
 
 ActionView::Template::Error (couldn't find file 'foundation'
   (in /Users/sarahmustafa/Desktop/Software Development Project/tickety/app/assets/stylesheets/application.css:1)):
-=======
 
 
 Started GET "/" for 127.0.0.1 at 2013-04-16 15:47:22 +0300
@@ -317,7 +316,7 @@ Completed 500 Internal Server Error in 9ms
 
 ActionView::Template::Error (couldn't find file 'foundation'
   (in /home/mj/tickety/app/assets/stylesheets/application.css:1)):
->>>>>>> 0239f06c0218f0893e69641bbb9542df3b2188e1
+
     2: <html>
     3: <head>
     4:   <title><%= full_title(yield(:title)) %></title>
@@ -325,7 +324,7 @@ ActionView::Template::Error (couldn't find file 'foundation'
     6:   <%= javascript_include_tag "application" %>
     7:   <%= csrf_meta_tags %>
     8:   <%= render 'layouts/shim' %>   
-<<<<<<< HEAD
+
   app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1568688513534499327_70293290812720'
 
 
@@ -334,7 +333,7 @@ ActionView::Template::Error (couldn't find file 'foundation'
 Started GET "/favicon.ico" for 127.0.0.1 at 2013-04-15 17:42:38 +0300
 
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-=======
+
   app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___58751151405003051_23257940'
 
 
@@ -1091,7 +1090,6 @@ ActionController::RoutingError (No route matches [GET] "/css/foundation.css"):
 Started GET "/js/foundation.min.js" for 127.0.0.1 at 2013-04-16 16:21:53 +0300
 
 ActionController::RoutingError (No route matches [GET] "/js/foundation.min.js"):
->>>>>>> 0239f06c0218f0893e69641bbb9542df3b2188e1
   actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
   railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
@@ -1129,8 +1127,6 @@ ActionController::RoutingError (No route matches [GET] "/js/foundation.min.js"):
   script/rails:6:in `<main>'
 
 
-<<<<<<< HEAD
-=======
 
 
 Started GET "/js/vendor/custom.modernizr.js" for 127.0.0.1 at 2013-04-16 16:21:53 +0300
@@ -5398,4 +5394,4 @@ Processing by PaymentsController#show as HTML
   Rendered layouts/_header.html.erb (1.3ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 112ms (Views: 101.7ms | ActiveRecord: 1.4ms)
->>>>>>> 0239f06c0218f0893e69641bbb9542df3b2188e1
+
