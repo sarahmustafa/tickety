@@ -1,38 +1,51 @@
+</br></br></br></br></br></br></br></br>
 <div class="row">
-<div class="small-2 large-4 columns">
-<p id="notice"><%= notice %></p>
+	<div class="large-9 small-centered columns">
+<center>
+<h1 class="title-prebooking">Show Information</h1>
+<hr>
 
-<p>
-  <b>Title:</b>
+</div></div>
+</center>
+
+<p id="notice"><%= notice %></p>
+<center>
+	<div class="row">
+	<div class="large-9 small-centered columns">
+		<div class="panel">
+<p class="prebooking-intro">
+  Title:
   <%= @movie.title %>
 </p>
 
-<p>
-  <b>Duration:</b>
+<p class="prebooking-intro">
+ Duration:
   <%= @movie.duration %>
 </p>
 
 <p>
 
-<p>
-  <b>Summary:</b>
+<p class="prebooking-intro">
+  Summary:
   <%= @movie.summary %>
 </p>
 
-<p>
-  <b>Genre:</b>
+<p class="prebooking-intro">
+  Genre:
   <%= @movie.genre %>
 </p>
 
-<p>
+<p class="prebooking-intro">
   <b>Actors:</b>
   <%= @movie.actors %>
 </p>
 
 <%= image_tag @movie.movie_image.url %>
-</div>
-</div>
-<center>
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+</div></div></div>
+
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
 </center>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>

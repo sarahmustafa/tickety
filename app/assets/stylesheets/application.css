@@ -1,7 +1,15 @@
 /*= require foundation */
 
 body {
-	background: white;
+    background: #fff url(/assets/faded.png) repeat;
+	position:absolute;	
+	width: 100%;
+	height:100%;
+}
+
+.dashicons{
+	width:50%;
+	height:50%;
 }
 
 .poster {
@@ -13,7 +21,7 @@ body {
 .prebooking {
 	width:150px;
 	height:100%;
-	overflow:scroll;	
+	overflow:hidden;	
 }
 
 .banner {
@@ -57,7 +65,15 @@ div.panel {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
 
-
+	.infobox {
+		height: 110px;
+		text-align: center;
+		background: #efefef;
+		background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
+		box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25); }
 
 
   .button.success {
@@ -69,24 +85,6 @@ div.panel {
         background: #CD6839; }
 
 
-	.your-prefix-class {
-	  @include prefix-postfix-base;
-	  @include prefix;
-	  @include grid-column($columns:3,$float:left);
-	@input-prefix-bg:                    darken(#fff, 5%);
-	@input-prefix-border-color:          darken(#fff, 20%);
-	@input-prefix-border-size:           1px;
-	@input-prefix-border-type:           solid;
-	@input-prefix-overflow:              hidden;
-	@input-prefix-font-color:            #333;
-	@input-prefix-font-color-alt:        #fff;
-	}
-
-	input[type="text"].your-input-class {
-	  @include grid-column($columns:9);
-	}
-	
-	
 	shamma {
     font-weight: bold;
     color: white;
@@ -156,3 +154,151 @@ div.panel {
 		color: #aa7503;
 		text-shadow: 0px -1px 0px #785202;
 	}
+	
+	/* menu */
+
+	.nav {
+	    border-bottom: 1px solid #000;
+	    background-color: rgba(0,0,0,1);
+	    width: 100%;
+	    position: fixed;
+	    z-index: 50;
+	    border-top: 1px solid rgba(250,105,0,.1);
+		-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		-webkit-transform: translate3d(0px,0px,0px);
+
+	}
+
+
+	.nav ul{
+		display: table;
+		margin: 0 auto;
+		padding: 10px 0 10px 0;
+	}
+
+		.nav ul li {
+			text-align: center;
+			display: table-cell;
+		}
+
+
+
+	.nav a {
+		color: #fff;
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+		padding-right: 20px;
+		text-decoration: none;
+	}
+
+	.nav a:hover {
+		color: #317eb9;
+		text-decoration: none;
+	}
+
+	.fade {
+	   opacity: 1;
+	   transition: opacity .25s ease-in-out;
+	   -moz-transition: opacity .25s ease-in-out;
+	   -webkit-transition: opacity .25s ease-in-out;
+	   }
+
+	   .fade:hover {
+	      opacity: 0.5;
+	      }
+
+	.button {
+		background: #3b71a0;
+		border: 1px solid #275883;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		font-size: 20px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.button:hover {
+		background: #5992c3;
+	}
+	
+	.title-prebooking {
+	    color: #317EB9;
+	    display: block;
+	    font: 30px 'Lato', sans-serif;
+	    margin: 0 0 0 0;
+	text-align: center;
+	    width: 100%;
+	    z-index: 0;
+	    display: block;
+	    letter-spacing: -1px;
+	}
+	
+	.prebooking-intro {
+	    width: 100%;
+	    margin: 0;
+	    font-size: 12px;
+	    line-height: 30px;
+	    display: block;
+	}
+	
+	#screen{
+		border:2px solid;
+		border-radius:25px;
+		background-color:white;
+		width:70%;
+	}
+	
+	.amount {
+		text-align:center;
+		margin: 0;
+	    font-size: 20px;
+	}
+	
+	.button.first {
+		width:100%;
+		background: #3b71a0;
+		border: 1px solid #275883;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		font-size: 13px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.button.first:hover {
+		background: #5992c3;
+	}
+	
+	.footer {
+		background: #000000;
+		color: white;
+		text-align:left;
+		font-size: 18px;
+		font-family: 'Roboto', sans-serif;
+		padding: 20px;
+		-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+		-webkit-transform: translate3d(0px,0px,0px);
+	}
+	
+	.button.second {
+		width:100%;
+		background: #3b71a0;
+		border: 1px solid #275883;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		font-size: 9px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.button.first:second {
+		background: #5992c3;
+	}
+

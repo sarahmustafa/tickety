@@ -1,7 +1,7 @@
+
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 <script src="http://jordankasper.com/jquery/imagecheck/jquery.simpleImageCheck-0.4.js"></script>
-
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -14,31 +14,32 @@
       </ul>
     </div>
   <% end %>
-<div class="row">
+
+
 	<div class="small-11 small-centered columns">
 	<div class="panel">
 		<div class="row">
 		<div class="small-3 columns">
 		<div class="prebooking">
-
 	      <%= image_tag @show.movie.movie_image.url %>
-
-  	</div>
+    	</div>
 		</div>
-		
-		<div class="small-8 columns">
-<%= f.hidden_field :customer_id, :value => @current_user.id %>
-<%= f.hidden_field :show_id, :value => @show.id %>
-  <div class="field">
-	<h3><%= "Movie Details" %></h3><br />
-	    <h5><%= "Movie Title: " %> <br /></h5><%= @show.movie.title %><br /> <br />
-	    <h5><%= "Movie Summary: " %> <br /></h5><%= @show.movie.summary %><br /><br />
-	    <h5><%= "Movie genre: " %><br /> </h5><%= @show.movie.genre %><br /><br />
-  <h5><%= "Location: " %><br /> </h5><%= @show.cinema.name %><br /><br />
-<h5><%= "Time: " %><br /> </h5><%= @show.show_time.strftime('%H:%M %p') %> on  <%= @show.show_date %> <br/><br /><br />
 
-  </div>
+<div class="small-8 columns">
+	<%= f.hidden_field :customer_id, :value => @current_user.id %>
+	<%= f.hidden_field :show_id, :value => @show.id %>
+<div class="field">
+<h3><%= "Movie Title: " %></h3>
+<p class="prebooking-intro"><%= @show.movie.title %></p>
+<h3>Movie genre:</h3>
+<p class="prebooking-intro"><%= @show.movie.genre %></p>
+<h3>Location:</h3>
+<p class="prebooking-intro"><%= @show.cinema.name %></p>
+<h3>Time:</h3>
+<p class="prebooking-intro"><%= @show.show_time.strftime('%H:%M %p') %> on  <%= @show.show_date %></p>
+<br /><br />
 </div>
+
 </div>
 </div>
 </div>
@@ -75,12 +76,16 @@
         <% end %>
 </label>
 
+<br/><div class="row">
+<div id="screen"><h4 style="color:black;">Screen</h4></div>
+</div><br/><br/>
 
 <% if (@a.all? &:is_taken?) == false %>
 <input type="Submit" value="Next" class="button success">
 <% else %>
 <%= "Sorry No Seats Available" %>
 <% end %>
+
 
 </div>
 </div>
@@ -98,14 +103,14 @@ $(document).ready(function() {
 
 $("input:disabled")
     .simpleImageCheck({
-      image: '/assets/booked_seat_img.gif',
-      imageChecked: '/assets/booked_seat_img.gif'
+      image: '/assets/booked_seat_img.png',
+      imageChecked: '/assets/booked_seat_img.png'
     })
   
    
   $("input:checkbox").not(":disabled").simpleImageCheck({
-    image: '/assets/available_seat_img.gif',
-    imageChecked: '/assets/selected_seat_img.gif'
+    image: '/assets/available_seat_img.png',
+    imageChecked: '/assets/selected_seat_img.png'
   });
   
   
@@ -113,7 +118,6 @@ $("input:disabled")
 });
 
 </script>
-
 
 
 

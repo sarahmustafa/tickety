@@ -1,51 +1,100 @@
-<div class="row">
-<div class="small-2 large-4 columns">
-		
-<p id="notice"><%= notice %></p>
+</br></br></br></br></br></br></br></br>
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
 
-<p>
-  <b>Username:</b>
-  <%= @user.username %>
-</p>
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <title>Tickety</title>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
 
-<p>
-  <b>Reward points:</b>
-  <%= @user.reward_points %>
-</p>
+  <script src="js/vendor/custom.modernizr.js"></script>
 
-<p>
-  <b>Billing address:</b>
-  <%= @user.billing_address %>
-</p>
+</head>
+<body>
 
-<p>
-  <b>Creditcard num:</b>
-  <%= @user.creditcard_num %>
-</p>
+  <div class="row">
+    <div class="large-12 columns">
 
-<p>
-  <b>Creditcard type:</b>
-  <%= @user.creditcard_type %>
-</p>
 
-<p>
-  <b>Security num:</b>
-  <%= @user.security_num %>
-</p>
-</div>
+      <!-- Header Content -->
+ 
+        <div class="row">
+ 
+			<div class="row">
+				<div class="large-9 small-centered columns">
+			<center>
+			<h1 class="title-prebooking">Profile Page</h1>
+			<hr>
 
-</div>
-<center>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-</center>
+			</div></div>
+			</center>
+ 
+          <div class="large-9 small-centered columns">
+ 
+            <h3 class="show-for-small"><hr/></h3>
+ <center>
+            <div class="panel">
+              <h4 class="hide-for-small"><%= @user.name %>'s Profile<hr/></h4>
+				<p class="prebooking-intro">
+				  <b>Username</b><br/>
+				  <%= @user.username %>
+				</p>
+				
+			<p class="prebooking-intro">
+			  <b>Email</b><br/>
+			  <%= @user.email %>
+			</p>
+
+			<p class="prebooking-intro">
+			  <b>Reward Points</b><br/>
+			  <%= @user.reward_points %>
+			</p>
+<% if @user.billing_address != nil%>
+			<p class="prebooking-intro">
+			  <b>Billing Address</b><br/>
+			  <%= @user.billing_address %>
+			</p>
+<% end%>
+<% if @user.creditcard_num != nil%>
+			<p class="prebooking-intro">
+			  <b>Creditcard Number</b><br/>
+			  <%= @user.creditcard_num %>
+			</p>
+<% end%>
+<% if @user.creditcard_type != nil%>
+			<p class="prebooking-intro">
+			  <b>Creditcard Type</b><br/>
+			  <%= @user.creditcard_type %>
+			</p>
+<% end%>
+<% if @user.security_num != nil%>
+			<p class="prebooking-intro">
+			  <b>Security Number</b><br/>
+			  <%= @user.security_num %>
+			</p>
+<% end%>
+
+
+            </div>
+ 
+          </div>
+ 
+        </div>
+ </center>
+      <!-- End Header Content -->
+
+ 
+	<center>
+	<%= link_to 'Edit', edit_user_path(@user), :class => 'button' %>
+	</center>
+
+</div></div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</body>
+</html>

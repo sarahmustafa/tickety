@@ -1,98 +1,204 @@
-<!DOCTYPE>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikebetterworld.com jQuery Parallax Effect Demo</title>
+<link href="/assets/style.css" rel="stylesheet" type="text/css" />
 
-<head>
-  <script src="http://foundation.zurb.com/docs/assets/vendor/custom.modernizr.js" type=
-  "text/javascript">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/nbw-parallax.js"></script>
+<script type="text/javascript" src="/assets//jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/assets//jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="/assets//jquery.inview.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+});
 </script>
 
-  <title>Tickety</title>
 </head>
 
 <body>
-  <div class="row">
-    <div class="large-6 small-centered columns"><img src="assets/Tickety2.jpg" /></div>
-  </div>
+	
 
+<!-- Logo -->
+<div id="first">
   <div class="row">
     <div class="large-12 columns">
-      <div class="panel">
-        <center>
-          <h4>New Releases!</h4>
-        </center>
+        <img id="logo" class="aligncenter" src="/assets/ticketyshadow.png">
 
-        <ul id="featured1" data-orbit="">
-          <li><div class="banner">
-	<img src= "http://1.bp.blogspot.com/-rg9wpXhFQPs/USh_env0PQI/AAAAAAAAAIo/NHWayNd5voE/s1600/beautifulcreatures2013.jpeg" />
-	</div><div class="orbit-caption">Beautiful Creatures</div></li>
 
-          <li><div class="banner">
-	<img src="http://www.filmofilia.com/wp-content/uploads/2013/03/The-Great-Gatsby-Opening-Cannes.jpg" />
-	</div>
-	<div class="orbit-caption">The Great Gatsby</div></li>
-	
-	<li><div class="banner">
-<img src="http://www.hdwallpapers.in/walls/the_croods_2013-wide.jpg" />
+        <span class="mini-sub-tag-wht" style="opacity: .4; margin-top: 60px;">Scroll Down</span>
+    </div>
+  </div>  
 </div>
-<div class="orbit-caption">The Croods</div></li>
-	
-	
-        </ul>
+
+<!-- Reward System -->
+<article id="space">
+  <div class="white-block">
+    <div class="row">
+      <div class="large-12 columns">          
+          <h1 class="title-tag">Did You Know About Our Customer Reward System?</h1>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="panel">
-        <div class="row">
-          <div class="large-6 small-centered columns">
-            <center>
-              <h4>Search</h4>
-            </center>
-
-            <div class="row collapse">
-              <div class="small-10 columns">
-                <input type="text" placeholder=
-                "movie title, cinema name, movie genre..." />
-              </div>
-
-              <div class="small-2 columns">
-                <a href="/newreleases" class="button prefix">Go</a>
-              </div>
-            </div>
-          </div>
+    
+    <div class="row">
+       <div class="large-12 columns">
+            <p class="process-intro"> Tickety offers a special Reward System for registered users only. With every ticket you purchase, you get credited with 5 reward points. You can use these reward points to purchase some of the sweetest offers you'll ever find anywhere, and because we love you, we give you 5 free points just for registering. 
+            </p>
         </div>
+    </div>
+    
+  	<div class="row" style="padding-top: 10px;">
+      <div class="large-4 columns">
+        <span class="mini-sub-tag">Free Popcorn</span>
+    		<img class="morph" style="margin-bottom: 10px;" src="assets/popcorn.png">
+    		<p class="process-intro">What is better than popcorn? Free popcorn, that's what!</p>
       </div>
-    </div><script type="text/javascript">
-//<![CDATA[
+      <div class="large-4 columns">
+         <span class="mini-sub-tag">Free Drinks</span>
+    		<img class="morph" style="margin-bottom: 10px;" src="assets/drink.png">
+    		<p class="process-intro">Our free drink coupons can be used in any cinema theater in Doha!</p>
+      </div>
+      <div class="large-4 columns">
+         <span class="mini-sub-tag">Free Tickets</span>
+    		<img class="morph" style="margin-bottom: 10px;" src="assets/freeticket.png">
+    		<p class="process-intro">With our customer reward system, you can get free tickets. Sweet!</p>
+    	</div>
+    </div> </br>
+<% if current_user %>
+<center><%= link_to "Check Reward Points", rewardsystem_path, :class => 'large button' %> </center> 
+<%end%> 
+</article>
 
-          // Google Analytics
-          var _gaq = _gaq || [];
-          _gaq.push(
-            ['_setAccount', 'UA-2195009-2'],
-            ['_trackPageview'],
-            ['b._setAccount', 'UA-2195009-27'],
-            ['b._trackPageview']
-          );
+<div id="villaggio" class="parallax" data-image="/assets/pepsi-ad.jpg"></div>
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+<!-- pillars -->
+<article id="desk">
+  <div class="white-block">
+    <div class="row">
+      <div class="large-12 columns" style="position: relative;">
+        <h1 class="title-tag">How It Work</h1>
+        <p> <span class="sub-tag">What You Need To Know</span></p>
+        <div id="film-strip"></div>
+      </div>
+    </div> 
 
-          document.write('<script src="http://foundation.zurb.com/docs/assets/vendor/'
-            + ('__proto__' in {} ? 'zepto' : 'jquery')
-            + '.js"><\/script>');
-    //]]>
-    </script> <script src="http://foundation.zurb.com/docs/assets/docs.js" type=
-    "text/javascript">
-</script> <script type="text/javascript">
-//<![CDATA[
-          $(document).foundation()
-                     .foundation('joyride', 'start');
-    //]]>
-    </script>
-  </div>
+    <div class="row three-pillars">
+	<center>
+      <div class="large-4 columns">
+       <span class="mini-sub-tag">The Bar Code</span>
+        <p>When purchasing a ticket, you have the option of printing it or showing a digital copy at the movie theatre. Each ticket has a bar code that is scannable. </p>
+      </div>
+      <div class="large-4 columns">
+        <span class="mini-sub-tag">Booking</span>
+        <p>Your window to book a movie ticket will close 15 minutes after the movie starts. However, the you get to book a ticket one week in advance if you wish. How awesome?</p>
+      </div>
+      <div class="large-4 columns">
+        <span class="mini-sub-tag">Refunds</span>
+        <p>Apologies! No refunds or cancellations are allowed. If you do not show up to your movie show, we regret that you will not be able to substitute the ticket for a later show. </p>
+      </div>
+</center>
+    </div> 
+  </div> 
+</article>
+
+<div id="pepsi" class="parallax" data-image="/assets/pepsi-ad.jpg" ></div>
+
+
+<!-- team -->
+
+<article id="kigs">
+  <div class="white-block">
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="title-tag">New Releases</h1>
+        <p> <span class="sub-tag">Check out new movies this week!</span></p>
+      </div>
+    </div>
+    
+	<div class="row">
+	  <div class="large-12 columns">
+	    <div class="row">
+			<ul class="large-block-grid-4">
+
+	<% @newrelease.each do |movie| %>
+			     	<li>
+					 <div class="poster">
+					<%= image_tag movie.movie_image.url %>
+					</div>
+				      <div class="infobox"><br />
+						<h7><%= "Movie Title: " %></h7><br />
+				        <h7 class="subheader"><%= movie.title  %><br /> </h7>
+						<h7><%= "Movie genre: " %></h7><br />
+				        <h7 class="subheader"><%= movie.genre  %><br /> </h7>
+					  </div>
+	<%= link_to "Buy Ticket", {:controller => "bookings", :action => "prebooking", :mov_id => movie.id}, :class => 'first button' %><br/>
+					</li>
+	<% end %>
+
+		</ul>
+	    </div>
+	  </div>
+	</div>
+    <div class="row">
+      <div class="large-12 columns">
+<center><%= link_to "View All Movies", currentlyshowing_path, :class => 'large button' %> </center>   </div>    </div>
+    </div>
+
+  </div> 
+</article>
+
+<div id="kfc" class="parallax" data-image="/assets/pepsi-ad.jpg" data-width="1600" data-height="800"></div>
+
+<script type="text/javascript">
+
+</script>
+
+
 </body>
 </html>

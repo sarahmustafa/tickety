@@ -26,42 +26,42 @@
 
   <div class="row">
     <div class="large-12 columns">
-    <%= f.label :show_time %><br />
+    <p class="prebooking-intro"> Show Time </p>
     <%= f.time_select :show_time %>
   </div>
 </div>
 
 <div class="row">
   <div class="large-12 columns">
-    <%= f.label :show_date %><br />
+   <p class="prebooking-intro"> Show Date </p>
     <%= f.date_select :show_date %>
   </div>
 </div>
 
   <div class="row">
     <div class="large-12 columns">
-    <%= f.label :show_type %><br />
+    <p class="prebooking-intro"> Show Type </p>
     <%= f.select :show_type, ["Regular","IMAX 3D","RealD 3D", "Dolby Digital 3D"], :include_blank => 'Select Theater Type' %> </div>
   
 </div>
 
   <div class="row">
     <div class="large-12 columns">
-    <%= f.label :cinema_id %><br />
+   <p class="prebooking-intro"> Cinema Name </p>
     <%= f.collection_select :cinema_id, Cinema.order(:name), :id, :name, include_blank: true %>
        </div>
 	</div>
 
   	  <div class="row">
 	    <div class="large-12 columns">
-    <%= f.label :theater_id, "Theater" %><br />
+   <p class="prebooking-intro"> Theater Number </p>
     <%= f.grouped_collection_select :theater_id, Cinema.order(:name), :theaters, :name, :id, :theater_number, include_blank: true %>
   </div>
 </div>
 
 	<div class="row">
     <div class="large-12 columns">
-<%= f.label :movie_title %>
+<p class="prebooking-intro"> Movie Title </p>
 <%= f.text_field :movie_title, data: {autocomplete_source: Movie.order(:title).map(&:title)} %>
 	</div>
 	</div>   
@@ -72,3 +72,4 @@
 	<input type="Submit" value="Submit" class="button"> 
 	</center>
 	<% end %>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>

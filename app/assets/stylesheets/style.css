@@ -1,0 +1,231 @@
+
+p {font-size: 14px;}
+
+.white-block {
+
+    background: #fff url(/assets/faded.png) repeat;
+    display: block;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    
+    position: relative; 
+    padding: 100px 0 64px 0;
+
+}
+
+.title-tag {
+    color: #317eb9;
+    display: block;
+    font: 60px 'Lato', sans-serif;
+    margin: 0 0 0 0;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.sub-tag {
+    color: #393939;
+    display: block;
+    font: 40px 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 6px 0 0 0;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.mini-sub-tag, .mini-sub-tag-wht, .mini-sub-tag-grey {
+    color: #317eb9;
+    display: block;
+    font: 30px 'Lato', sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    display: block;
+    letter-spacing: -1px;
+}
+
+	.mini-sub-tag-wht {
+		color: #fff;
+	}
+	
+	.mini-sub-tag-grey {
+		color: #393939;
+	}
+
+/* anims */
+
+.morph {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.morph:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#first{
+	background:url(/assets/seats.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 800px;
+	margin: 0;
+	padding: 160px 0 0 0;
+	width:100%;
+}
+
+#logo {
+    cursor: pointer;
+    margin-top: 140px;
+}
+
+/* -----------------------------------------
+   this is how we do it
+----------------------------------------- */
+
+#villaggio {
+	background:url(/assets/v.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 500px;
+	margin: 0;
+	padding: 160px 0 0 0;
+
+}
+
+#pepsi {
+	background:url(/assets/pepsi-ad.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 500px;
+	margin: 0;
+	padding: 160px 0 0 0;
+
+}
+
+#kfc {
+	background:url(/assets/kfc.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 500px;
+	margin: 0;
+	padding: 160px 0 0 0;
+
+}
+
+.process-intro {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+}
+
+.logos {
+	 border-top: 1px solid #d3d3d3;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+		
+	#clients ul{
+		display: table;
+		margin: 0 auto;
+		padding: 22px 0 10px 0;
+	}
+
+	#clients ul li {
+		text-align: center;
+		display: table-cell;
+		padding-right: 40px
+	}
+
+/* -----------------------------------------
+   new releases
+----------------------------------------- */
+
+#desk-bg {
+    height: 500px;
+    background-size: cover;
+}
+
+html.touch #desk-bg {
+    background-image: url(/assets/seats.jpg);
+}
+
+.phrenology {
+	z-index: 2; 
+	position: relative;
+}
+
+#film-strip {
+    background: url(/assets/FILM-STRIP.png) repeat-x 50% 0%;
+    -webkit-animation-name: sine-wave-lines;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    position: absolute;
+    left: -2000px;
+    bottom: -50px;
+    width: 5000px;
+    height: 43px;
+    z-index: 1;
+}
+@-webkit-keyframes sine-wave-lines {
+    from {
+        background-position: 0px 50%;
+    }
+    to {
+        background-position: 100px 50%;
+    }
+}
+
+.pillars-head {margin-top: 161px;}
+.three-pillars {padding-top: 64px;}
+
+/* -----------------------------------------
+   media queries
+----------------------------------------- */
+
+@media only screen and (max-width: 640px) {
+	
+	p {font-size: 12px;}
+	#top {height: 600px;}
+	#space-bg, #desk-bg, #kigs-bg, #map-bg {height: 300px;}
+	#logo {width: 60%;}
+	.white-block {padding: 100px 0 32px 0;}
+	.title-tag {font-size: 30px;}
+	.sub-tag {font-size: 30px;}
+	.mini-sub-tag, .mini-sub-tag-wht, .mini-sub-tag-grey {font-size: 20px;}
+	p {font-size: 12px;}
+	.team-title {font-size: 18px;}
+	.pillars-head {margin-top: 40px;}
+	.three-pillars {padding-top: 82px;}
+	.pic, .contact-pic {width: 70%; height: 70%;}
+
+}
+
+.parallax-block {
+	width: 1280px; height: 500px; visibility: hidden;
+	}

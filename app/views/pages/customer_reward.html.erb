@@ -1,16 +1,25 @@
-
- 
-  <div class="row">
+<center>
  
 
-    <div class="large-12 columns" role="content">
  
+
  
-        <h3>Customer Reward System</h3>
-        <h6>Hello <%= @user.name %>!   You have <%= @user.reward_points %>  points</h6>
 
-<h4> Available Rewards </h4>
+	</br></br></br></br></br></br></br></br>
 
+		<div class="large-9 small-centered columns">
+	<center>
+	<h1 class="title-prebooking">Customer Reward Points</h1>
+
+	<hr>
+
+<a href="/rewardsystem"><h5>Hello <%= @user.name %>!   You have <%= @user.reward_points %>  points</h5></a>
+
+<h3> Available Rewards </h3>
+
+
+<% if @user.reward_points > 15%>
+<div class="panel">
 <table>
   <tr>
     <th>Reward title</th>
@@ -31,8 +40,14 @@
 </table>
 
 <br />
-
-
- 
+<% else %>
+<div class="panel">
+<h5> Seems like you don't have enough points for any rewards! </h5>
+</br>
 </div>
+<%end%>
+
 </div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</center>
