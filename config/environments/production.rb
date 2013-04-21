@@ -1,4 +1,11 @@
 Tickety::Application.configure do
+
+Paperclip.options[:command_path] = "/usr/local/bin/"
+
+Paperclip.options.merge!(:command_path => "/usr/local/bin")
+
+Paperclip.options.merge!(:command_path => "/usr/bin")
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -22,6 +29,21 @@ Tickety::Application.configure do
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
+
+
+  #change mail delivery to either :smtp, :sendmail, :file, :test
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => 'gmail.com',
+    :authentication => 'plain',
+    :enable_starttls_auto => true,
+    :user_name => 'tickety.jp@gmail.com',
+    :password => 'juniorproject'
+  }
+  
+  config.action_mailer.default_url_options = {host: "localhost:3002"}
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache

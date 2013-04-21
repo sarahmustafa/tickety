@@ -1,0 +1,142 @@
+/*= require foundation */
+
+
+
+body {
+	background: white;
+}
+
+.poster {
+	width:140px;
+	height:200px;
+	overflow:hidden;
+}
+
+.prebooking {
+	width:150px;
+	height:100%;
+	overflow:scroll;	
+}
+
+.banner {
+	width:600px;
+	height:270px;
+	overflow:hidden;
+}
+
+QR {
+			padding: 10px;
+			display: inline-block;
+			background-color: #ffd350;
+
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+}
+
+html { font-size: 62.5% }
+ 
+div.panel {
+	padding: 20px 20px 2px 20px;
+	background: #efefef;
+	background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
+	box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+	margin: 0 0 20px 0; }
+	
+	
+	
+	.panel.callout {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CDCDCD;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #CDCDCD;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+
+
+
+
+  .button.success {
+    background-color: #E15119;
+    border-color: #E15119;
+    color: white; }
+
+	.button.success:hover {
+        background: #CD6839; }
+
+
+	
+	shamma {
+    font-weight: bold;
+    color: white;
+    padding: 0 0.1875em;
+    margin: 0;
+    margin-left: -0.1875em; }
+	
+	.panel.jamma {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FA9A50;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #FA9A50;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+
+
+
+
+	.goldenticket {
+		margin: 30px 0;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		padding: 15px 10px 10px 10px;
+		
+
+		-moz-box-shadow: 3px 3px 5px 6px #000;
+		-webkit-box-shadow: 3px 0px 10px 6px #000;
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3), inset 1px 1px 0px 0px rgba(255, 246, 141, 0.68), inset -1px -1px 0px 0px rgba(136, 95, 0, 0.5);
+
+		background-color: #FBB829; 
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBB829), to(#1a82f7));
+		background-image: -webkit-linear-gradient(top, #FFE545, #FBB829); 
+		background-image:    -moz-linear-gradient(top, #FFE545, #FBB829);
+		background-image:     -ms-linear-gradient(top, #FFE545, #FBB829);
+		background-image:      -o-linear-gradient(top, #FFE545, #FBB829);
+	}
+	
+	
+	sara {
+		text-transform: uppercase;
+		font-size: 30px;
+		margin: 20px 0px;
+		font-family: 'Fjalla One', sans-serif;
+		letter-spacing: -1px;
+		color: #352501;
+		text-shadow: 0px -1px 0px #feeabf;
+		
+	}
+
+	.movie, .theater, .cinema, .showtime, .showdate, .seat, ,price {
+		width: 273px;
+		float: left;
+		padding: 20px;
+		font-size: 30px;
+		border-top: 1px solid #bb8003;
+		border-bottom: 1px solid #bb8003;
+		box-shadow:  inset 0px 1px 0px 0px rgba(255, 246, 141, 0.8),  0px 1px 0px 0px rgba(255, 246, 141, 0.8);}
+		
+	.movie sara, .theater sara, .cinema sara, .showtime sara, .showdate sara, .seat sara, .price sara {
+		font-family: 'Trocchi';
+		font-size: 20px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		color: #aa7503;
+		text-shadow: 0px -1px 0px #785202;
+	}

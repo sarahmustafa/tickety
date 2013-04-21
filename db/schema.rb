@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409131503) do
+ActiveRecord::Schema.define(:version => 20130414152040) do
 
   create_table "bookings", :force => true do |t|
     t.date     "booking_date"
@@ -65,6 +65,12 @@ ActiveRecord::Schema.define(:version => 20130409131503) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "searches", :force => true do |t|
+    t.string   "movie_title"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "seats", :force => true do |t|
     t.integer  "number"
     t.string   "type"
@@ -95,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20130409131503) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",                        :null => false
+    t.string   "username",                                       :null => false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
@@ -103,13 +109,18 @@ ActiveRecord::Schema.define(:version => 20130409131503) do
     t.boolean  "is_customer"
     t.boolean  "is_admin"
     t.boolean  "is_manager"
-    t.integer  "reward_points",    :default => 5
+    t.integer  "reward_points",                   :default => 5
     t.string   "billing_address"
     t.integer  "creditcard_num"
     t.string   "creditcard_type"
     t.integer  "security_num"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
   end
+
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token"
 
 end

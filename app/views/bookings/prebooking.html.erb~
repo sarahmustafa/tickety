@@ -1,3 +1,15 @@
+<head>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+ 
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+</head>
+
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -11,49 +23,73 @@
     </div>
   <% end %>
 
-<div class="panel", width:100px>
-	       <div class="row">
-	                <div class="large-6 columns" style="width:200px">
+<div class="row">
+	<div class="small-11 small-centered columns">
+	<div class="panel">
+		<div class="row">
+		<div class="small-3 columns">
+		<div class="prebooking">
 	      <%= image_tag @movie_details.movie_image.url %>
-	</div>
+    	</div>
+		</div>
 
-
+<div class="small-8 columns">
 <%= f.hidden_field :customer_id, :value => @current_user.id %>
   <div class="field">
 	<h3><%= "Movie Details" %></h3><br />
-	    <h4><%= "Movie Title: " %> <br /></h4><h6><%= @movie_details.title %><br /> </h6>
-	    <h4><%= "Movie Summary: " %> <br /></h4><h6><%= @movie_details.summary %><br /></h6>
-	    <h4><%= "Movie genre: " %><br /> </h4><h6><%= @movie_details.genre %></h6>
+	    <h5><%= "Movie Title: " %> <br /></h5><h6 class="subheader"><%= @movie_details.title %><br /> </h6><br />
+	    <h5><%= "Movie Summary: " %> <br /></h5><h6 class="subheader"><%= @movie_details.summary %><br /></h6><br />
+	    <h5><%= "Movie genre: " %><br /> </h5><h6 class="subheader"><%= @movie_details.genre %></h6><br />
+	
+	<td>   <%= link_to 'Trailer', @movie_details.link %> </td> 
+	<br /><br />
   </div>
-	</div>
-</div>
-<center>
-<a> Movie is available in: </a> <br />
 
-<table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<center>
+	<div class="row">
+	<div class="small-11 small-centered columns">
+
+<h3>Available Shows</h3><br />
+
+
+<table id="shows" class="display">
+<thead>
 <tr>
 <th>Cinema</th>
 <th>Time</td>
 <th>Date</td>
 <th> </th>
 </tr>
+</thead>
 
+<tbody>
 <tr>
 <% @shows.each do |show| %>
 
 <td> <%= link_to show.cinema.name, :controller => "cinemas", :action => "show", :id => show.cinema.id %> </td> 
 <td> <%= link_to show.show_time, :controller => "shows", :action => "show", :id => show.id %> </td> 
 <td> <%= link_to show.show_date, :controller => "shows", :action => "show", :id => show.id %> </td> 
-<%= link_to "Book", :controller => "bookings", :action => "new", :show_id => show.id %>
+<td> <%= link_to "Book", :controller => "bookings", :action => "new", :show_id => show.id %> </td>
 
 
 </tr>
 <% end %>
-<br />
+
+</tbody>
 </table>
+<br />
+<br />
 </center>
 
 
+</div>
+	</div>
 
  
 
