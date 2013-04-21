@@ -1,65 +1,61 @@
-/*= require jquery.ui.core */
-/*= require jquery.ui.theme */
-/*= require dataTables/src/demo_table_jui */
 /*= require foundation */
-
-
 
 body {
     background: #fff url(/assets/faded.png) repeat;
-	position:absolute;	
-	width: 100%;
-	height:100%;
+        position:absolute;
+        width: 100%;
+        height:100%;
 }
 
 .dashicons{
-	width:50%;
-	height:50%;
+        width:50%;
+        height:50%;
 }
 
 .poster {
-	width:140px;
-	height:200px;
-	overflow:hidden;
+        width:140px;
+        height:200px;
+        overflow:hidden;
 }
 
 .prebooking {
-	width:150px;
-	height:100%;
-	overflow:hidden;	
+        width:150px;
+        height:100%;
+        overflow:hidden;
 }
 
 .banner {
-	width:600px;
-	height:270px;
-	overflow:hidden;
+        width:600px;
+        height:270px;
+        overflow:hidden;
 }
 
 QR {
-			padding: 10px;
-			display: inline-block;
-			background-color: #ffd350;
+                        padding: 10px;
+                        display: inline-block;
+                        background-color: #ffd350;
 
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-			border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
 }
 
 html { font-size: 62.5% }
- 
+
 div.panel {
-	padding: 20px 20px 2px 20px;
-	background: #efefef;
-	background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
-	box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-	margin: 0 0 20px 0; }
-	
-	
-	
-	.panel.callout {
+        padding: 20px 20px 2px 20px;
+        background: #efefef;
+        background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
+        filter:progid: DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F4F4F4',GradientType=0 );
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+        margin: 0 0 20px 0; }
+
+
+
+        .panel.callout {
     border-style: solid;
     border-width: 1px;
     border-color: #CDCDCD;
@@ -69,15 +65,15 @@ div.panel {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
 
-	.infobox {
-		height: 110px;
-		text-align: center;
-		background: #efefef;
-		background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
-		box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-		-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-		-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25); }
+        .infobox {
+                height: 110px;
+                text-align: center;
+                background: #efefef;
+                background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f4f4f4));
+                box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+                -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+                -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25); }
 
 
   .button.success {
@@ -85,22 +81,18 @@ div.panel {
     border-color: #E15119;
     color: white; }
 
-	.button.success:hover {
+        .button.success:hover {
         background: #CD6839; }
 
 
-<<<<<<< HEAD
-	
-=======
->>>>>>> shammaalhetmi-master
-	shamma {
+        shamma {
     font-weight: bold;
     color: white;
     padding: 0 0.1875em;
     margin: 0;
     margin-left: -0.1875em; }
-	
-	.panel.jamma {
+
+        .panel.jamma {
     border-style: solid;
     border-width: 1px;
     border-color: #FA9A50;
@@ -111,202 +103,201 @@ div.panel {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
 
 
+/* ticket */
+
+        .goldenticket {
+                margin: 30px 0;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding: 15px 10px 10px 10px;
 
 
-	.goldenticket {
-		margin: 30px 0;
-		margin-right: auto;
-		margin-left: auto;
-		text-align: center;
-		padding: 15px 10px 10px 10px;
-		
+                -moz-box-shadow: 3px 3px 5px 6px #000;
+                -webkit-box-shadow: 3px 0px 10px 6px #000;
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3), inset 1px 1px 0px 0px rgba(255, 246, 141, 0.68), inset -1px -1px 0px 0px rgba(136, 95, 0, 0.5);
 
-		-moz-box-shadow: 3px 3px 5px 6px #000;
-		-webkit-box-shadow: 3px 0px 10px 6px #000;
-		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3), inset 1px 1px 0px 0px rgba(255, 246, 141, 0.68), inset -1px -1px 0px 0px rgba(136, 95, 0, 0.5);
-
-		background-color: #FBB829; 
-		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBB829), to(#1a82f7));
-		background-image: -webkit-linear-gradient(top, #FFE545, #FBB829); 
-		background-image:    -moz-linear-gradient(top, #FFE545, #FBB829);
-		background-image:     -ms-linear-gradient(top, #FFE545, #FBB829);
-		background-image:      -o-linear-gradient(top, #FFE545, #FBB829);
-	}
-	
-	
-	sara {
-		text-transform: uppercase;
-		font-size: 30px;
-		margin: 20px 0px;
-		font-family: 'Fjalla One', sans-serif;
-		letter-spacing: -1px;
-		color: #352501;
-		text-shadow: 0px -1px 0px #feeabf;
-		
-	}
-
-	.movie, .theater, .cinema, .showtime, .showdate, .seat, ,price {
-		width: 273px;
-		float: left;
-		padding: 20px;
-		font-size: 30px;
-		border-top: 1px solid #bb8003;
-		border-bottom: 1px solid #bb8003;
-		box-shadow:  inset 0px 1px 0px 0px rgba(255, 246, 141, 0.8),  0px 1px 0px 0px rgba(255, 246, 141, 0.8);}
-		
-	.movie sara, .theater sara, .cinema sara, .showtime sara, .showdate sara, .seat sara, .price sara {
-		font-family: 'Trocchi';
-		font-size: 20px;
-		text-transform: uppercase;
-		margin-bottom: 5px;
-		color: #aa7503;
-		text-shadow: 0px -1px 0px #785202;
-	}
-	
-	/* menu */
-
-	.nav {
-	    border-bottom: 1px solid #000;
-	    background-color: rgba(0,0,0,1);
-	    width: 100%;
-	    position: fixed;
-	    z-index: 50;
-	    border-top: 1px solid rgba(250,105,0,.1);
-		-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		-webkit-transform: translate3d(0px,0px,0px);
-
-	}
+                background-color: #FBB829;
+                background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBB829), to(#1a82f7));
+                background-image: -webkit-linear-gradient(top, #FFE545, #FBB829);
+                background-image:    -moz-linear-gradient(top, #FFE545, #FBB829);
+                background-image:     -ms-linear-gradient(top, #FFE545, #FBB829);
+                background-image:      -o-linear-gradient(top, #FFE545, #FBB829);
+        }
 
 
-	.nav ul{
-		display: table;
-		margin: 0 auto;
-		padding: 10px 0 10px 0;
-	}
+        sara {
+                text-transform: uppercase;
+                font-size: 30px;
+                margin: 20px 0px;
+                font-family: 'Fjalla One', sans-serif;
+                letter-spacing: -1px;
+                color: #352501;
+                text-shadow: 0px -1px 0px #feeabf;
 
-		.nav ul li {
-			text-align: center;
-			display: table-cell;
-		}
+        }
+
+        .movie, .theater, .cinema, .showtime, .showdate, .seat, ,price {
+                width: 273px;
+                float: left;
+                padding: 20px;
+                font-size: 30px;
+                border-top: 1px solid #bb8003;
+                border-bottom: 1px solid #bb8003;
+                box-shadow:  inset 0px 1px 0px 0px rgba(255, 246, 141, 0.8),  0px 1px 0px 0px rgba(255, 246, 141, 0.8);}
+
+        .movie sara, .theater sara, .cinema sara, .showtime sara, .showdate sara, .seat sara, .price sara {
+                font-family: 'Trocchi';
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                color: #aa7503;
+                text-shadow: 0px -1px 0px #785202;
+        }
+
+        /* menu */
+
+        .nav {
+            border-bottom: 1px solid #000;
+            background-color: rgba(0,0,0,1);
+            width: 100%;
+            position: fixed;
+            z-index: 50;
+            border-top: 1px solid rgba(250,105,0,.1);
+                -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                -webkit-transform: translate3d(0px,0px,0px);
+
+        }
+
+
+        .nav ul{
+                display: table;
+                margin: 0 auto;
+                padding: 10px 0 10px 0;
+        }
+
+                .nav ul li {
+                        text-align: center;
+                        display: table-cell;
+                }
 
 
 
-	.nav a {
-		color: #fff;
-		font-family: 'Lato', sans-serif;
-		font-size: 16px;
-		padding-right: 20px;
-		text-decoration: none;
-	}
+        .nav a {
+                color: #fff;
+                font-family: 'Lato', sans-serif;
+                font-size: 16px;
+                padding-right: 20px;
+                text-decoration: none;
+        }
 
-	.nav a:hover {
-		color: #317eb9;
-		text-decoration: none;
-	}
+        .nav a:hover {
+                color: #317eb9;
+                text-decoration: none;
+        }
 
-	.fade {
-	   opacity: 1;
-	   transition: opacity .25s ease-in-out;
-	   -moz-transition: opacity .25s ease-in-out;
-	   -webkit-transition: opacity .25s ease-in-out;
-	   }
+        .fade {
+           opacity: 1;
+           transition: opacity .25s ease-in-out;
+           -moz-transition: opacity .25s ease-in-out;
+           -webkit-transition: opacity .25s ease-in-out;
+           }
 
-	   .fade:hover {
-	      opacity: 0.5;
-	      }
+           .fade:hover {
+              opacity: 0.5;
+              }
 
-	.button {
-		background: #3b71a0;
-		border: 1px solid #275883;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		-o-border-radius: 5px;
-		font-size: 20px;
-		font-family: 'Roboto', sans-serif;
-	}
+        .button {
+                background: #3b71a0;
+                border: 1px solid #275883;
+                border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -o-border-radius: 5px;
+                font-size: 20px;
+                font-family: 'Roboto', sans-serif;
+        }
 
-	.button:hover {
-		background: #5992c3;
-	}
-	
-	.title-prebooking {
-	    color: #317EB9;
-	    display: block;
-	    font: 30px 'Lato', sans-serif;
-	    margin: 0 0 0 0;
-	text-align: center;
-	    width: 100%;
-	    z-index: 0;
-	    display: block;
-	    letter-spacing: -1px;
-	}
-	
-	.prebooking-intro {
-	    width: 100%;
-	    margin: 0;
-	    font-size: 12px;
-	    line-height: 30px;
-	    display: block;
-	}
-	
-	#screen{
-		border:2px solid;
-		border-radius:25px;
-		background-color:white;
-		width:70%;
-	}
-	
-	.amount {
-		text-align:center;
-		margin: 0;
-	    font-size: 20px;
-	}
-	
-	.button.first {
-		width:100%;
-		background: #3b71a0;
-		border: 1px solid #275883;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		-o-border-radius: 5px;
-		font-size: 13px;
-		font-family: 'Roboto', sans-serif;
-	}
+        .button:hover {
+                background: #5992c3;
+        }
 
-	.button.first:hover {
-		background: #5992c3;
-	}
-	
-	.footer {
-		background: #000000;
-		color: white;
-		text-align:left;
-		font-size: 18px;
-		font-family: 'Roboto', sans-serif;
-		padding: 20px;
-		-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
-		-webkit-transform: translate3d(0px,0px,0px);
-	}
-	
-	.button.second {
-		width:100%;
-		background: #3b71a0;
-		border: 1px solid #275883;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		-o-border-radius: 5px;
-		font-size: 9px;
-		font-family: 'Roboto', sans-serif;
-	}
+        .title-prebooking {
+            color: #317EB9;
+            display: block;
+            font: 30px 'Lato', sans-serif;
+            margin: 0 0 0 0;
+        text-align: center;
+            width: 100%;
+            z-index: 0;
+            display: block;
+            letter-spacing: -1px;
+        }
 
-	.button.first:second {
-		background: #5992c3;
-	}
+        .prebooking-intro {
+            width: 100%;
+            margin: 0;
+            font-size: 12px;
+            line-height: 30px;
+            display: block;
+        }
 
+        #screen{
+                border:2px solid;
+                border-radius:25px;
+                background-color:white;
+                width:70%;
+        }
+
+        .amount {
+                text-align:center;
+                margin: 0;
+            font-size: 20px;
+        }
+
+        .button.first {
+                width:100%;
+                background: #3b71a0;
+                border: 1px solid #275883;
+                border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -o-border-radius: 5px;
+                font-size: 13px;
+                font-family: 'Roboto', sans-serif;
+        }
+
+        .button.first:hover {
+                background: #5992c3;
+        }
+
+        .footer {
+                background: #000000;
+                color: white;
+                text-align:left;
+                font-size: 18px;
+                font-family: 'Roboto', sans-serif;
+                padding: 20px;
+                -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2), 0px 3px 0px 3px rgba(28,34,36,0.1);
+                -webkit-transform: translate3d(0px,0px,0px);
+        }
+
+        .button.second {
+                width:100%;
+                background: #3b71a0;
+                border: 1px solid #275883;
+                border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -o-border-radius: 5px;
+                font-size: 9px;
+                font-family: 'Roboto', sans-serif;
+        }
+
+        .button.first:second {
+                background: #5992c3;
+        }

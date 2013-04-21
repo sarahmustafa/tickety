@@ -13,12 +13,8 @@ class PagesController < ApplicationController
   end
 
   def index
-<<<<<<< HEAD
- @movies = Search.new
- @movies.save
-=======
+
     @newrelease = Movie.order("created_at desc").limit(8).where("created_at < ?", 1.second.ago)
->>>>>>> shammaalhetmi-master
   end
 
 def create

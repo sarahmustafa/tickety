@@ -1,102 +1,52 @@
-	<div class="nav">
-      	<ul class="inline-list">
-			<% if current_page?(root_path) == true %>
-      		<li><a href="#first" class="fade anchorLink">Tickety</a></li>
-			<%else%>
-			<li><a href="/" class="fade anchorLink">Tickety</a></li>
-			<%end%>
-			
-			
-			<% if current_page?(root_path) == true %>
-      		<li><a href="#space" class="fade anchorLink">Customer Reward</a></li>
-			<%else%>
-			<li><%=link_to "Customer Rewards", rewardsystem_path %></li>
-			<%end%>
-			
-			<% if current_page?(root_path) == true %>
-      		<li><a href="#desk" class="fade anchorLink">Policies</a></li>
-			<%else%>
-			<li><%= link_to "Website Policies", policies_path %></li>
-<<<<<<< HEAD
-			<li><%= link_to "Website Information", webinfo_path %></li>
-			<li><%= link_to "Website Developers", creators_path %></li>
-        </ul>
-      </li>
-      <li class="divider"></li>
-		<li><%=link_to "Currently Showing", currentlyshowing_path %></li>
-      <li class="divider"></li>
-		<li><%=link_to "New Releases", newreleases_path %></li>
-      <li class="divider"></li>
-		<li><%=link_to "Customer Reward Program", rewardsystem_path %></li>
-      <li class="divider"></li>
-
-	
-    <li class="divider"></li>
-	
-
-    </ul>
-
- 	 <!-- Right Nav Section -->
-	    <ul class="right">
-	      <li class="divider hide-for-small"></li>
-			 <% if current_user %>
-				<% if current_user.is_admin == true %>
-				<li><%=link_to "Admin Dashboard", admindashboard_path %></li>
-				<% end %>
-
-				<li class="divider"></li>
-					      <li class="has-dropdown"><a href="#"> <%= @current_user.name %>'s Account</a>
+        <div class="nav">
+        <ul class="inline-list">
+                        <% if current_page?(root_path) == true %>
+                <li><a href="#first" class="fade anchorLink">Tickety</a></li>
+                        <%else%>
+                        <li><a href="/" class="fade anchorLink">Tickety</a></li>
+                        <%end%>
 
 
-					        <ul class="dropdown">
-			                <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
-			                <li class="divider"></li>
-			                <li><%= link_to "Logout", :logout %> </li>
-			              </ul>
-			              </li>
-				    <% else %>
-				     <li> <%= link_to "Register", new_user_path %> </li>
-				     <li> <%= link_to "Login", :login %></li>
-				    <% end %>
-			 </li>
-	      <li class="divider"></li>
-	      <li class="divider show-for-small"></li>
-	    </ul>
-	  </section>
-	</nav>
-=======
-			<%end%>
+                        <% if current_page?(root_path) == true %>
+                <li><a href="#space" class="fade anchorLink">Customer Reward</a></li>
+                        <%else%>
+                        <li><%=link_to "Customer Rewards", rewardsystem_path %></li>
+                        <%end%>
+
+                        <% if current_page?(root_path) == true %>
+                <li><a href="#desk" class="fade anchorLink">Policies</a></li>
+                        <%else%>
+                        <li><%= link_to "Website Policies", policies_path %></li>
+                        <%end%>
 
 
 
             <% if current_page?(root_path) == true %>
-      		<li><a href="#kigs" class="fade anchorLink">New Releases</a></li>
-			<%else%>
-			<li><%=link_to "New Releases", newreleases_path %></li>
-			<%end%>
-			
+                <li><a href="#kigs" class="fade anchorLink">New Releases</a></li>
+                        <%else%>
+                        <li><%=link_to "New Releases", newreleases_path %></li>
+                        <%end%>
+
 
            <li><%=link_to "Currently Showing", currentlyshowing_path %></li>
 
 
 
 
-      		<li class="divider hide-for-small"></li>
-				 <% if current_user %>
-					<% if current_user.is_admin == true %>
-					<li><%=link_to "Admin Dashboard", admindashboard_path %></li>
-					<% end %>
+                <li class="divider hide-for-small"></li>
+                                 <% if current_user %>
+                                        <% if current_user.is_admin == true %>
+                                        <li><%=link_to "Admin Dashboard", admindashboard_path %></li>
+                                        <% end %>
 <li><%= link_to current_user.name, user_path(current_user.id) %></li>
 
-				                <li><%= link_to "Logout", :logout %> </li>
+                                                <li><%= link_to "Logout", :logout %> </li>
 
 
-					    <% else %>
-					     <li> <%= link_to "Register", new_user_path %> </li>
-					     <li> <%= link_to "Login", :login %></li>
-					    <% end %>
-				 </li>
-      	</ul>
-  		</div>
-
->>>>>>> shammaalhetmi-master
+                                            <% else %>
+                                             <li> <%= link_to "Register", new_user_path %> </li>
+                                             <li> <%= link_to "Login", :login %></li>
+                                            <% end %>
+                                 </li>
+        </ul>
+                </div>
